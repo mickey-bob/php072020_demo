@@ -1,0 +1,80 @@
+<!-- demo_html.html -->
+<!-- web: htm -> css -> javascript -> php
+
+ -->
+ <!DOCTYPE html>
+ <!DOCTYPE html>
+ <!-- the html la the to nhat, bao lay cac the con lai -->
+ <html>
+ <!-- <head> dung mo ta thong tin cho trang vd: tieu de, nhung link css, js, ... -->
+ 	<meta charset="utf-8">
+ 	<title>Tieu de trang web</title>
+ </head>
+ <body>
+ <!-- the body la the chua cac noi dung se hien thu ra trinh duyet -->
+ Hello ohohohoho
+ <!-- Thẻ h - heading - có các thẻ từ h1 -> h6, tương đương kích thước giảm dần từ h1 -> h6. Thẻ h là thẻ đầy đủ -->
+ <h1>Thẻ h1</h1>
+ <h2>Thẻ h2</h2>
+ <h3>Thẻ h3</h3>
+ <h4>Thẻ h4</h4>
+ <h5>Thẻ h5</h5>
+ <h6>Thẻ h6</h6>
+ <!-- Thẻ p - paragraph - đoạn văn, cách nhau bởi 1 dòng trắng -->
+ <p>Thẻ p</p>
+ <p>Thẻ p2</p>
+ <!-- thẻ br - break thẻ khuyết, xuống dòng -->
+đây là nôi <br> dung file
+<!-- thẻ hr - horizontal - tạo 1 đường kẻ ngang -->
+<hr>
+<!-- thẻ i - thẻ đầy đủ --- in nghiêng text -->
+<i>In nghiêng</i>
+<!-- thẻ b -- bold thẻ in đậm -->
+<b>in đậm</b>
+<!-- thẻ u -- underline gạch chân text -->
+<u> gạch chân</u>
+<!-- thẻ div ------dùng để bao lấy thẻ khác, dùng trong việc xây dựng các khối trong trang web, thường kết hợp với CSS mới có tác dụng -->
+<!-- thẻ span --- dùng để định dạng lại text nào đó trong 1 khối văn bản, kết hợp với CSS -->
+<!-- THẺ meta --định nghĩa siêu dữ liệu, nằm trong thẻ head  -->
+<!-- thẻ img -- hiển thị ảnh trên trang web, sẽ có 1 số thuộc tính sau:
++ src: đường dẫn tới file ảnh, sử dụng đường dẫn tương đối để nhúng file, đường dẫn tương đối: vị trí file muốn nhúng vào so với file hiển thị
++ title text hiển thị khi rê chuột qua ảnh
++ alt: text hiển thị khi ảnh không tồn tại
++ width: chiều dài ảnh
++ height: chiều rrong
+ -->
+ <img src="picture1.png" width="300px" height="500px" title="re chuot qua" alt="thuco tinh alt">
+ <!-- các thẻ liên quan đến bảng -->
+<table border="1" cellspacing="0" cellpadding="80px">
+	<!-- thẻ tr -- table row -- hàng -->
+	<tr>
+	<th>Name</th>
+	<th>Age</th>
+	<!-- <th>Address</th> -->
+	</tr>
+	<tr>
+		<!-- thẻ td -- table data -->
+		<td colspan="2">khanh</td>
+		<!-- colspan gộp cột, khi gộp cột phải giữ cấu trúc ban đầu của bảng -->
+		<!-- <td>30</td> -->
+		<td rowspan="2">HN</td>
+	</tr>
+</table> 
+<!-- thẻ ul, ol, li -- các thẻ đày đủ dạng danh sách -->
+<!-- thẻ ul -- unorder lít, li: thẻ danh sách ko có thứ tự -->
+<ul>
+	<li> thẻ li thứ nhất </li>
+	<li> thẻ li thứ hai </li>
+	<li> thẻ li thứ ba </li>
+</ul>
+
+<!-- thẻ ol - orderlist -li, thẻ danh sách có thứ tự -->
+<ol>
+	<li> thẻ li thứ nhất </li>
+	<li> thẻ li thứ hai </li>
+	<li> thẻ li thứ ba </li>
+</ol>
+<!-- thẻ a - thẻ đầy đủ, link -->
+<a href="https://google.vn" target="_blank"> click vao day de chuyen huong ve google</a>
+ </body>
+ </html>
