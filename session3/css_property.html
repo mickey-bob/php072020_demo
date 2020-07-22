@@ -1,0 +1,108 @@
+<!-- css_property.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cac thuco tinh co ban phan 1</title>
+</head>
+<body>
+<style type="text/css">
+	#p-backgroud {
+		background-color: red;
+		background-image: url('images/picture1.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		/*trong css cu phap viet gop cac thuoc tinh cho ngan gon - cac viet sau tuong duong voi cac khai bao tren*/
+		background: red url('images/picture1.png') no-repeat center;
+	}
+	/*code css tay day
+	1- bacground,
+	2- font:;
+
+	*/
+	#span-font{
+		font-family: 'Arial';
+		font-weight: bold;
+		font-style: italic;
+		font-size: 15px;
+
+	}
+
+	/* Thuc te khi CSS se su dung cong cu inspect html cua trinh duyet de css - truc quan hon*/
+
+	/*3 - text*/
+	/* 4 -- border
+
+	*/
+	/* 5 - margin: khoang cach giua cac phan tu html lien ke voi nhau;
+
+	*/
+	#p-margin {
+    	background: yellow;
+    	margin-top: 25px;
+    	margin-bottom: 25px;
+    	margin-left: 100px;
+    	margin-right: 100px;
+    	/*hoac dung cach viet gop nhu sau*/
+    	margin: 40px; 
+    	/*margin ca 4 huong 40px*/
+    	/*margin tren-duoi trai-phai  tren duoi-20, trai-phai- 10*/
+    	margin: 20px 10px;
+    	/*margin top-right-bottom-left margin: 10px 15 20 25*/
+
+    	/*6 -- padding: khoang cach tu border cua phan tu den noi dung ben trong no;*/
+}
+#div-padding {
+    border: 1px solid red;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+body {
+	min-height: 1500px;
+}
+#div-fixed {
+	background: red;
+}
+/*7 position - co 3 gia tri relative, absolute, fixed*/
+#div-fixed {
+    position: fixed;
+    left: 176px;
+    top: 125px;
+}
+/*position fixed luon co dinh tren trang web, du co cuon trang web den tri tri nao tren web
+*/
+/*position relative*/
+#div-relative{
+	width: 100px;
+	height: 100px;
+	background: yellow;
+}
+#div-relative {
+    position: relative;
+    left: 153px;
+    top: 45px;
+}
+/*position: absolute*/
+/*neu su dung theo huong doc lap thi se gan giong voi relavtive, tuy nhien vi tri dua vao 4 canh cua trinh duyet, chu ko phair vi tri hien tai cua relative*/
+#div-absolute{
+	background: green;
+}
+/* thuong su dung absolute ben trong 1 khoi relative, khi nay vi tri mac dinh cua khoi absolute se lay theo vi tri cua khoi cha gan nhat dang co position=relative*/
+#relative {
+	background: red;
+}
+</style>
+<div id="relatvie">
+	<span id="absolute"> the span</span>
+</div>
+<div id="div-absolute"> the div voi postion absolute</div>
+<div id="div-relative"> the div voi css position relative</div>
+<div id="div-fixed">day le the div voi css possiotion fixed</div>
+<div id="div-padding"> the div voi css padding</div>
+<p id="p-margin"> the p voi css margin</p>
+<p id="p-text"> the p voi css text</p>
+<span id="span-font"> the span voi css font</span>
+<p id="p-backgroud"> the p voi css backgound</p>
+</body>
+</html>

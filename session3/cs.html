@@ -1,0 +1,136 @@
+<!-- demo_css.html
+CSS - CAScading stype sheets
+css là ngôn ngữ của frontend, hướng đến trang chí cho trang web.
+
+-- Note: backend xây dung cuoi cung, sau khi hoan thanh frontend.
+---
+css cho phep lam web responsive, tuong thich voi nhieu thiet bi nhu pc, ipad, mobile.
++ css co nhieu phien ban, cac phien ban sau cang ho tro nhieu ve mat hieu ung
++ css co duoi file la .css
+
+2 -  Cu phap khai bao CSS
+
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<title> DEmo CsS </title>
+ 	<!-- nhung cac file .css trong cap the hed
+		- viec nhung file trong lap trinh hay su dung quy tac duong dan tuong doi de nhung.
+ 	 -->
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body>
+ 	<style type="text/css">
+ 		
+ 		h1{
+ 			color: red;
+ 		}
+ 		/*h1: selector: la phan tu se chiu anh huong tu css*/
+ 		/*color: thuoc tinh css
+		+ red: gia tri tuong ung cua thuoc tinh;
+ 		*/
+ 		h1{
+ 			background-color: yellow;
+ 		}
+ 		/*
+		3: cach xac dinh selector trong CSS;
+
+		+ selector xac dinh theo thuoc tinh id vs class cua the, theo nao trong html cung co id vs class.
+		Id: dai dien cho tinh duy nhat tren trang web;
+		Class: dai dien cho tinh su dung lai;
+		
+		--se
+
+		lector voi id se co tien to #
+		-- selector voi class se co tien to: .;
+
+ 		*/
+ 		#selector-id {
+ 			color: red;
+ 		}
+ 		.selector-class {
+ 			border: 1px solid blue;
+ 		}
+ 		/* moi the p nam trong selector co id=parent se bi anh huong boi css.
+ 		Ngoai ky tu phan cap cha con the dau space, con co the gap cac ky tu sau: + > ~ *;
+
+ 		*/
+ 		/* 5: selector theo ten the: thuong dc dung khi css o tinh toan cuc;
+
+ 		*/
+ 		#parent p {
+ 			color: green;
+ 		}
+ 		p {
+ 			font-weight: bold;
+ 		}
+
+ 		/* 6: selector theo thuco tinh the*/
+ 		input[type='text']
+ 		{background-color: red;}
+ 		/*7 selector theo trang thai: hover - re chuot qua, first-child- phan tu dau tien trong cung phan cap*/
+ 		#p-hover:hover{
+ 			color: blue;
+ 		}
+ 		/*chi cac li nao la phan tu dau tien cua ul thi moi bi an css*/
+ 		ul li:first-child{
+ 			background-color: green;
+ 		}
+ 		/*li cuoi cung bi an css*/
+ 		ul li:last-child{
+ 			background-color: red;
+ 		}
+ 		/*li o vi tri thu 3 bi an css*/
+ 		ul li:nth-child(3){
+ 			background: yellow;
+ 		}
+ 		#a-before-after:before{
+ 			content: 'dung css de them conttent phia truoc selector hien tai';
+ 		}
+ 		/*trang thai before, affrer buoc phai khai bao thuoc tinh content, thuong se dc su dung cho viec hien thi cac font*/
+ 	</style>
+
+
+<!-- II: cac cach nhung css khi lam viec voi html
+
+	1- nhung inline ngay trong the HTML, thong qua thuoc tinh style.
+
+	-- demo cach dung thu nhat.
+	--- nen han che cach nhung nay vi no lam cau truc html phuc tap hon
+ -->
+ 	<span style="color: red:">the phan voi cach nhung css thu nhat</span>
+ 	
+<!-- 2- nhung inline trong file .html thogn qua cap the <styple>
+ ---  --- cach nay ko co tinh su dung lai, demo dung se tien hon
+ 		3- nhung tu 1 file css ben ngoai., su dung the link de nhung, nhuung trong the <head>
+ 	-- tao file css ngay hang voi file html, thuc te dung cach nay.
+ -->
+
+ 	<a href="#" id="a-before-after"> the a</a>
+ 	<ul>
+ 		<li> the li thu nhat</li>
+ 		<li> the li thu hai</li>
+ 		<li> the li thu ba</li>
+ 		<li> the li thu bon</li>
+ 	</ul>
+ 	<p id="p-hover"> re chuot qua the p nay de doi mau text</p>
+ 	<div id="parent">
+			<p>the p1</p> 		
+			<p>the p2</p>
+
+ 	</div>
+ 	<p>the p ben ngoai div, ko chua p1, p2</p>
+
+
+ 	<a href="#" id="selector-id" class="selector-class"> The a voi selector id vs class</a>
+ 	<h1>Demo CSS</h1>
+ 	<form action="" method="get">
+ 		<input type="text" name="" value="123">
+ 		<i></i>
+ 		<input type="password" name="">
+
+ 	</form>
+ </body>
+ </html>
