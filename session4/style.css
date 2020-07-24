@@ -1,0 +1,7 @@
+/*file style.css ngang hang voi file.html*/
+.container {
+    /* background: red; */
+    width: 50%;
+    margin: auto;
+    border: 1px solid #000;
+}

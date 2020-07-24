@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Demo CSS phan 2 - layout trang web</title>
+</head>
+<body>
+	<style type="text/css">
+	 	/*css can ban cua buoi truoc*/
+	 	/*css position: absolute;*/
+	 	body {
+	 		min-height: 1000px;
+	 		background: #ccc;
+	 	}
+	 	#div-absolute {
+	 		background: green;
+	 	}
+	 	#relative {
+	 		background: red;
+	 		width: 200px;
+	 		height: 200px;
+	 		position: relative;
+	 	}
+	 	div#width-height {
+    		background: yellow;
+   			 width: 50%;
+   			 height: 200px;
+   			 max-width: 500px;
+		}
+		/*z-index*/
+		/*z-index the hien muc do uu tien hien thi cua cac phan tu ma dang co position absolute*/
+		#z-index1 {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#z-index2 {
+			width: 200px;
+			height: 200px;
+			background: blue;
+			z-index: 1;
+		}
+		#z-index3 {
+			width: 300px;
+			height: 300px;
+			background: yellow;
+		}
+		/*viet css chung cho nhieu selector cung 1 luc*/
+		#z-index1, #z-index2, #z-index3 {
+			position: absolute;
+		}
+		/*CSS OVERFLOW: cac dinh cach thuc hien thu khi 1 phan tu html bi tran noi dung*/
+		/*1 so gia tri chinh: hidden, scroll, auto;*/
+		/*CSS OPACITY: set do mo cho phan tu*/
+		#h1-opacity {
+			opacity: 0.4;
+		}
+
+		/*CSS Transition: xac dinh thoi gian va hieu ung chuyen doi trang thai cua phan tu*/
+
+		#div-transition {
+			background: red;
+			width: 200px;
+			height: 200px;
+		}
+		#div-transition:hover {
+			background: blue;
+		}
+		#div-transition {
+    	background: red;
+    	width: 200px;
+    	height: 200px;
+    	transition: all 5s ease;
+		}
+		/*the INLINE: text bat ky nam truoc/sau phan tu inline thi se khong bi xuong dong.
+			BLOCK: text bat ky nam truoc/sau phan tu block se bi xuong dong;
+		*/
+		/*mot so the hien thi mac dinh kieu:
+		inline: b, i, u, span, a, img;
+		block: div, p, h, ul, ol;
+		---> Ngoai ra co the nhan biet 1 phan tu laf inline hay block la set mau nen cho phan tu do, mau nen chiem vua du noi dung ben trong --> inline, neu mau nen full width --> block.
+		*/
+		/*CHu y: neu muon chuyen tu block ve inline thi nen chuye nve kieu inline-block thay vi inline, de co the margin-top, margin bottom duoc, -- vi inline  ko margin top -- bottom duoc*/
+		/*css co 1 thuoc tinh cho phep chuye ndoi linh hoat giua cacc kieu inline vs block la diskplay
+		
+		*/
+	li {
+    display: inline-block;
+    margin: 0 15px;
+}
+	/*CSS Float: thuong dung cho viec dung layout, chia bo cuc cho trang web;
+	Hien nay se it su dung the table de dunglayout, vi khong linh hoat trong viec thiet ke wweb responsive.
+
+	-- Khai niem dung layout se lien quan den hang va cot
+
+	-- CSS float: co 3 gia tri: left, right, none --> CSS float: phan tu bi css float giong nhu 1 nam cham, hut cac phan tu ngay phia sau no len tren, co xu huong sep cac phan tu tren 1 hang - ko hut phan tu dung truoc;
+
+
+	*/
+	.container {
+		border: 5px solid black;
+	}
+	.col1 {
+		background: red;
+	}
+	.col2 {
+		background: green;
+	}
+	.col3 {
+		background: yellow;
+	}
+	.col {
+		float: left;
+		width: 33%;
+	}
+	/*khi dung layout su dung float, thi bat buoc phai set cho tung cot, nen set width theo don vi % de responsive cho website
+	- khi dung float , luon can phai fix truong hop bi vo giao dien do float gay ra
+	__> co 2 cach fix viec vo giao dien:
+
+		1- Can thiep vao HTML:; them 1 phan tu bat ky vao sau cua phan tu cuoi cung dang bi float, su dung css :clear:both hco phan tu vua them;
+		2- ko can can thiep vao html, su dung css tren khoi cha dang bao lay cac phan tu dang bi float ben trong, overflow: auto;
+	;
+
+
+
+	*/
+	/*.clearfix {*/
+    /*clear: both;*/
+		/*}*/
+	.container {
+		overflow: auto;
+	}
+	/*CSS FLEX: chuyen dung de xay dung layout nh float*/
+	.flex-container {
+		background: pink;
+    	display: flex;
+	}
+	.flex1 {
+		
+		background: red;
+	}
+	.flex2 {
+		background: blue;
+	}
+	.flex3 {
+		background: yellow;
+	}
+	.flex4 {
+		background: green;
+	}
+	.flex-item {
+		width: 25%;
+	}
+	/*nen uu tien dung flex de dung layout vi co che linh hoat cuaa no. Co che mac dinh cua flex luon giu cac khoi con ben trong no tren cung 1 hang, du co thay doi kich thuoc cac khoi con bao nhieu di nua*/
+	/*de dung layout voi flex se can thiep css sau se can thiep css vao khoi cha: diskpaly: flex*/
+	</style>
+	<!-- xay dung 1 menu don gian su dung cau truc ul -li -->
+	<!-- thu kiem tra xem 1 so the html xem mac dinh la inline hay block -->
+	<div class="flex-container">
+		<div class="flex1 flex-item">
+			Cot 1
+		</div>
+		<div class="flex2 flex-item">
+			Cot 2
+		</div>
+		<div class="flex3 flex-item">
+			Cot 3
+		</div>
+		<div class="flex4 flex-item">
+			Cot 4
+		</div>
+		
+	</div>
+	<div class="container-float">
+		<div class="row">
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			<div class="col">
+			cot 1111111111111111
+			cot 11111111111111111
+			cot 11111111111111111 
+
+			</div>
+			
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="col1 col">
+			COT 1
+		</div>
+		<div class="col2 col">
+			COT 2
+		</div>
+		<div class="col3 col">
+			COT 3
+		</div>
+		<div class="clearfix">
+
+			
+		</div>
+	</div>
+	<ul>
+		<li>
+			<a href="#"> Link 1</a>
+		</li>
+		<li>
+			<a href="#"> Link 2</a>
+		</li>
+		<li>
+			<a href="#"> Link 3</a>
+		</li>
+		<li>
+			<a href="#"> Link 4</a>
+		</li>
+	</ul>
+
+	<span>the spann</span> text kie mtra the span
+	<a href="#"> the a1</a>
+	<a href="3"> the a2</a>
+	<div>the div1</div> <div>the div 2</div>
+	<div id="div-transition"> re chuot qua div nay de xem hhieu ung doi mau</div>
+	<h1 id="h1-opacity">h 1 voi css opacity</h1>
+	<div id="div-overflow">ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+	<div id="z-index1">
+		Red
+	</div>
+	<div id="z-index2">
+		Blue
+	</div>
+	<div id="z-index3">
+		yellow
+	</div>
+	<div id="width-height"> the div voi css width height</div>
+	<div id="relative"><div id="div-absolute"> the div voi css position abolute </div> </div>
+</body>
+</html>
