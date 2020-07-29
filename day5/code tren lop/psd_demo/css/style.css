@@ -1,0 +1,21 @@
+body {
+	/*margin lai css cua trinh duyet, moi truyen duyet thi margin default lai khac nhau*/
+	margin: 0;
+}
+.header {
+    background: #2f2f2f;
+    color: #fff;
+}
+.header-content {}
+
+
+/*nhung font da download vao he thong*/
+/*nhung font pacifico*/
+@font-face {
+	/*dat ten font*/
+	font-family: 'pacifico';
+	/*duong dan toi font da download, nhung theo quy tac duong dan tuong doi*/
+	/*do file pacifico dang nam trong thu muc font, tuy nhien font ko ngang hang voi file style.css hien tai,
+	 nen tu file style.css can phai len 1 cap, su dung ky tu: ../*/
+	src: url('../font/Pacifico.ttf');
+}

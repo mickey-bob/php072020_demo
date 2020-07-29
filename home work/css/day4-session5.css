@@ -1,0 +1,42 @@
+.container {
+    /*background: red;*/
+    width: 60%;
+    margin: auto;
+}
+.logo {
+    background: #efefef;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 10px 0;
+}
+.menu {
+    background: #efefef;
+    text-align: center;
+    padding: 4px 0;
+    margin-top: 5px;
+}
+ul {
+    display: inline-block;
+}
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.main-content {
+    margin-top: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+/*ngoai flaot, flex con co 1 cach dan trang layout khacs la display: gird*/
+.row {
+    display: flex;
+    margin: 0 -10px;
+}
+.col {
+    width: 33.33%;
+    background: #efefef;
+    height: 100px;
+    padding-top: 5px;
+    margin: 0 10px;
+}
