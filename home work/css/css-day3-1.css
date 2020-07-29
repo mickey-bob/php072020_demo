@@ -1,0 +1,10 @@
+body {
+    background-color: #EEFFFF;
+}
+.warnings {
+    color: red;
+}
+.head {
+    font-weight: bold;
+    text-transform: capitalize;
+}
