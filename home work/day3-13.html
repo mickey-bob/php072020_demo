@@ -11,11 +11,11 @@
 		<h2> Survey form</h2>
 		<!-- survey content -->
 		<div class="survey">
-			<form class="form">
-				<p>Let us know how we can improve coffecamp</p>
+			<form class="form" action="" method="GET">
+				<p class="survey-p">Let us know how we can improve coffecamp</p>
 				<table class="table-form">
 					<tr>
-						<td>
+						<td class="td-from">
 							*Name: 
 						</td>
 						<td>
@@ -23,19 +23,19 @@
 						</td>
 					</tr>
 					<tr>
-						<td>*Email: </td>
+						<td class="td-from">*Email: </td>
 						<td>
 							<input type="text" name="" placeholder="Enter your mail">
 						</td>
 					</tr>
 					<tr>
-						<td>*Age</td>
+						<td class="td-from">*Age</td>
 						<td>
 							<input type="text" name="" placeholder="Age">
 						</td>
 					</tr>
 					<tr>
-						<td> Which option best describes your current role</td>
+						<td class="td-from"> Which option best describes your current role</td>
 						<td>
 							<select>
 								<option>Student</option>
@@ -46,7 +46,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>How likely is that you recommend coffe to a frend</td>
+						<td class="td-from">How likely is that you recommend coffe to a frend</td>
 						<td>
 							<input type="radio" name="choose"> Definiety <br>
 							<input type="radio" name="choose"> Maybe <br>
@@ -55,7 +55,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>What do you like most in coffe</td>
+						<td class="td-from">What do you like most in coffe</td>
 						<td>
 							<select>
 								<option>Select an option</option>
@@ -64,7 +64,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Things that should be improved in the future</td>
+						<td class="td-from">Things that should be improved in the future</td>
 						<td>
 							<input type="checkbox" name=""> front-end project <br>
 							<input type="checkbox" name=""> back-end project <br>
@@ -75,14 +75,17 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Any commnents or suggestion</td>
+						<td class="td-from">Any commnents or suggestion</td>
 						<td>
-							<textarea rows="10" cols="40"></textarea>
+							<textarea rows="3" cols="20"></textarea>
 						</td>
 					</tr>
+				<!-- <input class="submit-button" type="submit" name="" value="Submit"> -->
 				</table>
+				<input class="submit-button" type="submit" name="" value="Submit">
 			</form>
 		</div>
+		
 		<!-- end survey content -->
 	</div>
 	<!-- end manin container -->

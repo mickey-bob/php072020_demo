@@ -1,20 +1,47 @@
-body {
+body,html {
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
-
 .container {
     background-color: #A9D7D1;
     position: relative;
-    width: 100%;
-    height: 1000px;
+    width: 600px;
+    height: 600px;
     text-align: center;
+    margin: auto;
+    /* padding: 0px 10px; */
+    overflow: hidden;
 }
 .survey {
     position: absolute;
     background-color: #ffff;
-    width: 800px;
-    height: 800px;
-    margin: 0px 20px 20px 20px;
+    width: 90%;
+    height: 85%;
+    margin: 0% 0% 5% 5%;
     /* display: inline-block; */
     text-align: left;
+    /* border: 10px solid; */
+}
+p.survey-p {
+    text-align: center;
+}
+input.submit-button {
+    background-color: #59ACE0;
+    color: white;
+    border: 1px;
+    border-radius: 3px;
+    width: 80px;
+    height: 20px;
+    font-size: 13px;
+    display: block;
+    margin: auto;
+}
+/*tr:first-child {*/
+    /*color: red;*/
+    /*text-align: right;*/
+/*}*/
+td.td-from {
+    text-align: right;
+    height: 27px;
 }
