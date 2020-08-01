@@ -1,0 +1,93 @@
+@font-face {
+	font-family: 'QlassikBold_TB';
+	src:url'../font/QlassikBold_TB.ttf';
+}
+@font-face {
+	font-family: 'Qlassik_TB';
+	src:url'../font/Qlassik_TB.ttf';
+}
+body {
+	margin: 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.header {
+    background: #D6E6E7;
+    padding: 20px 0;
+    font-family: Qlassik_TB;
+    font-size: 20px;
+    color: #3a6669;
+}
+.header-content {
+    /* background: red; */
+    width: 80%;
+    margin: auto;
+}
+/*set relative cho khoi main de khoi main-content,
+ khi ap dung css position absolute se luon di chuyen dua vao khoi main nay*/
+
+.main {
+    position: relative;
+}
+.main-top {
+    height: 100px;
+    background: #554033;
+}
+.main-bottom {
+    height: 500px;
+    background: #B1A38D;
+}
+
+/*de can giua 1 phan tu dang su dung position so voi position: relative --- phai su dung:
+ left: 0, rigt: 0, auto*/
+.main-content {
+    position: absolute;
+    background: #fefae8;
+    top: 95px;
+    width: 80%;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+ul {
+	margin: 0;
+	list-style: none;
+	display:flex;
+	padding: 0;
+	/*padding 0 : bo di padding mac dinh cua trinh duyet, o dau menu co 1 khoang trang*/
+}
+.menu li {
+    /*display: inline-block;*/
+    width: 20%;
+    /*float: left;*/
+    background: #88ac3a;
+    text-align: center;
+    padding: 8px 0;
+}
+/*do tinh chat the li luon co khoang cach voi nhau, ma ko the bo di dc, 
+ke ca khi de margin 0, padding 0 -- nen su dung :float: left;
+*/
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial Regular;
+}
+/*cu phap selector theo trnag thai: dau tien, cuoi, sau, hover*/
+.menu li:first-child {
+	background: #fefae8;
+}
+/*chi the a nam torng li dau tien moi bi css*/
+.menu li:first-child a {
+	color: #000;
+}
+.menu {
+    margin-bottom: 15px;
+}
+.banner {
+    padding: 0 15px;
+}
+img.banner-img {
+    width: 100%;
+}
