@@ -45,7 +45,7 @@ body {
 .main-content {
     position: absolute;
     background: #fefae8;
-    top: 95px;
+    top: 50px;
     width: 80%;
     margin: auto;
     left: 0;
@@ -91,3 +91,11 @@ ke ca khi de margin 0, padding 0 -- nen su dung :float: left;
 img.banner-img {
     width: 100%;
 }
+.row {
+    display: flex;
+}
+.content-item {
+    width: 50%;
+    margin-left: 20px;
+}
+

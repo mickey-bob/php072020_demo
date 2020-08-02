@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 1000px;
+}
+.container {
+    border: 3px solid;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+span.container-top {
+    border-bottom: 3px solid;
+    display: inline-block;
+    width: 100%;
+}
+.main {
+    border: 1px solid red;
+}
+.main-top {
+    width: 95%;
+    background: yellow;
+    height: 100px;
+    margin: auto;
+}
+.main-center {
+    width: 95%;
+    background: yellow;
+    height: 100px;
+    margin: auto;
+}
+.main-bottom {
+    width: 95%;
+    background: yellow;
+    height: 100px;
+    margin: auto;
+}
+
+/*.rows {
+    width: 20%;
+    height: 50px;
+    background: black;
+}
+*/
