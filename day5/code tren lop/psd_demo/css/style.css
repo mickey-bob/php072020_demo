@@ -19,3 +19,41 @@ body {
 	 nen tu file style.css can phai len 1 cap, su dung ky tu: ../*/
 	src: url('../font/Pacifico.ttf');
 }
+.row {
+    display: flex;
+}
+li {
+    display: inline-block;
+    padding: 10px;
+}
+.header-content {
+    width: 80%;
+    margin: auto;
+}
+.logo {
+    /* margin-right: 600px; */
+    width: 70%;
+}
+.menu {
+    /* margin-left: 0px; */
+    text-align: center;
+    width: 30%;
+}
+.main-top-content {
+    padding-top: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+.main-top {
+    padding-bottom: 50px;
+    background: #F1F1F1;
+}
+img.image {
+    margin-left: 40px;
+}
+.main-botto {
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+}
