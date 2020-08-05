@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+.container {
+    background: #2077C4;
+    position: relative;
+    height: 1500px;
+}
+.container-top {
+    background: #FFFFFF;
+    position: absolute;
+    top: 20px;
+}
+.container-footer {
+    position: absolute;
+    bottom: 0px;
+}
+.rows {
+    display: flex;
+}
+.main-header {
+    width: 80%;
+    margin: auto;
+    height: 100px;
+    position: relative;
+}
+.main-header-logo {
+    position: absolute;
+}
+.main-header-menu {
+    position: absolute;
+    /* height: 100px; */
+    right: 0px;
+}
+li {
+    display: inline-block;
+}
+.avatar-content {
+    background: #2483C9;
+    height: 70px;
+    padding-left: 10%;
+}
+.main-container.rows {
+    width: 80%;
+    margin: auto;
+}
+.main-container-right {
+    width: 75%;
+}
+
+.main-container-left {
+    width: 25%;
+}

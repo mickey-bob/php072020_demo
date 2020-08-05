@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>demo-responsive</title>
+</head>
+<body>
+<!-- khai niem responsive
++ web responsive co the hien thi tuong thichs voi nhieu thiet bi khacs nhau:
+pc - ipad - mobile
++ web responsive chuan se ko xuat hien thanh cuon ngang
++ ve mat html, can them 1 the meta sau de trinh duyet se hieu duoc kich thuoc chuan cua cac thiet bi.
+<meta name="viewport" content="width=device-width,initial-scale=1">
++ ve mat css, su dung 1 thuoc tinh css moi: @media 
+ -->
+ 	<style type="text/css">
+ 		/*de responsive dc, su duong css sau: @meida(<kich thuoc thiet bi muon responsive>)*/
+ 		/*cac kich thuoc chuan cua cac thiet bi
+		+ mobile: max-width < 767px;
+		+ipad/tablet: min-width: 767px, max-width: 1023px;
+		+ pc: min-width: 1024px;
+		- thuc te ko can khai bao @media cho pc, vi khi code css laf code cho pc, neu muon resonsive ve cac thiet bi nho hon thif css đè lên css of pc
+ 		*/
+ 		h1 {
+ 			color: red;
+ 		}
+ 		/*cac code css responsive phai nằm phía sau CSS cho PC --> MỚI ghi đè dc css of pc*/
+ 		@media(min-width: 767px) and (max-width: 1023px)
+ 			{
+ 				/*code css trong vung nay se an voi cac theit bi ipad/tablet*/
+ 				h1 {
+ 					color: yellow;
+ 				}
+
+ 			}
+ 		/*css cho mobile*/
+ 		@media(max-width: 767px){
+ 			h1 {
+ 				color: green;
+ 			}
+ 		}
+ 	</style>
+
+	<h1> thay doi kich thuoc trinh duyet se thay mau thay doi</h1>
+	<!-- vi du 2:
+	tren pc: hien thi 1 hang 4 cot
+	ipad: 2 hang, moi hang 2 cot
+	mobile: 4 hang, moi hang 1 cot 
+	 -->
+	 <style type="text/css">
+	 	.col1 {
+	 		background: red;
+	 	}
+	 	.col2 {
+	 		background: blue;
+	 	}
+	 	.col3 {
+	 		background: yellow;
+	 	}
+	 	.col4 {
+	 		background: pink;
+	 	}
+	 	.rows {
+    	display: flex;
+		}
+		.col {
+			width: 25%;
+		}
+		/*CSS tren ipad*/
+		@media (min-width: 767px) and (max-width: 1023px)
+			{
+				.rows {
+					    display: flex;
+					    flex-wrap: wrap;
+						}
+				/*de bo di co che luon giu cac cot tren 1 hang cua fle, phai them css sau:
+					flex-wrap:wrap;
+				*/
+				.col {
+					width: 50%;
+				}
+			}
+		/*css cho mobile*/
+		@media(max-width: 767px)
+			{
+				.rows {
+					flex-wrap: wrap;
+				}
+				.col {
+					width: 100%;
+			}
+		}
+
+	 </style>
+	 <div class="rows">
+	 	<div class="col1 col">
+	 		cot 1
+	 	</div>
+	 	<div class="col2 col">
+	 		cot 2
+	 	</div>
+	 	<div class="col3 col">
+	 		cot 3
+	 	</div>
+	 	<div class="col4 col">
+	 		cot 4
+	 	</div>
+	 </div>
+</body>
+</html>

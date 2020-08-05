@@ -1,0 +1,133 @@
+<!-- demo-bootstrap.html
+1- khai niem ve bootstrap
++ la 1 thu vien cuaa css, cung cap cac class co san cung rat nhieu cac component tien dung.
++ thu vien nay cung cap co che responsive
++ dc tich hop vao hau het cac framwork cua php nhu: lavarel, zend, cake ...
+2- huong dan cai dat:
+3_ tich hop vao he thong, nhung file css. co 2 cach:
+ + tai ve va nhung file bootstrap.min.css vao file html
+ + dung link CDN, link online:
+ 4 - thuc hanh: layout trong bootstrap
+ + boottrap theo kieu mobile first - thiet ke web tu mobile -> ipad -> pc . tai thoi diem hien tai chua nen theo huong nhu nay.
+ + boottrap co class frefix nhu sau: col- , col-sm, col-md-,
+ + bootstrap chia 1 hang lam 12 cot bang nhau
+---- hoc bootstrap la hoc layout vs componet co san
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title> demo bootstrap</title>
+ 	<!-- de trang responsive dc, luon phai khai bao the meta -->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ </head>
+ <body>
+ 	<!-- demo cau truc layout mua cua boottrap -->
+ 	<h1>the h1</h1>
+ 	<style type="text/css">
+ 		.col1 {
+ 			background: red;
+ 		}
+ 		.col2 {
+ 			background: yellow;
+ 		}
+ 		.col3 {
+ 			background: pink;
+ 		}
+ 		.col4 {
+ 			background: blue;
+ 		}
+ 	</style>
+ 	<div class="container">
+ 		<div class="row">
+ 			<div class="col-md-3 col-sm-6 col-12 col1 ">
+ 				cot 1
+ 			</div>
+ 			<div class="col-md-3 col-sm-6 col-12 col2 ">
+ 				cot 2
+ 			</div>
+ 			<div class="col-md-3 col-sm-6 col-12 col3 ">
+ 				cot 3
+ 			</div>
+ 			<div class="col-md-3 col-sm-6 col-12 col4 ">
+ 				cot 4
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<!-- 2 demo cac component cua boostrap -->
+ 	<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  A simple secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  A simple light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
+</div>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<h1>thuc hanh 1</h1>
+<div class="container">
+  <form action="" method="post">
+    <h3>job application</h3>
+    <h4> contact infomation</h4>
+    <div class="row">
+        <div class="col-md-6 col-md-6 col-md-6">
+          <label for="first-name">first name:</label>
+          <input type="text" name="" id="first-name" class="form-control">
+          <!-- the label chi dung trong cac input form -->
+          <!-- innput phai khai bao id, gia tri cua id phai trung voi gia tri cuar for trong
+          label de hieu ung co tac dung -->
+        </div>
+        <div class="col-md-6 col-md-6 col-md-6">
+          <label for="last-name">last name:</label>
+          <input type="text" name="" id="last-name" class="form-control">
+          <!-- the label chi dung trong cac input form -->
+          <!-- innput phai khai bao id, gia tri cua id phai trung voi gia tri cuar for trong
+          label de hieu ung co tac dung -->
+        </div>
+        <div class="form-group">
+              <label for="email"> email</label>
+              <input type="email" name="" id="email" class="form-control">
+
+        </div>
+        <div class="form-group">
+          <input type="submit" name="" value="SEND" class="btn-primary">
+        </div>
+    </div>
+  </form>
+</div>
+
+ </body>
+ </html>
