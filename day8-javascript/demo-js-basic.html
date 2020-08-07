@@ -1,0 +1,170 @@
+<!-- demo js basic.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// colsle.log hien thi messeage rong tab console cua trinh duyet, dung de debug - xem thong ti du lieu
+		console.log('hehe, hello dong nay dau roi troi oi');
+		//  cac khai niem chung cua lap trinh
+		// 1-bien: bien doi : gia tri luc nao cung co the thay doi, phu thuoc muc dich cua mik,
+		// + khai bao bien trong JS: var, let
+		var name = 'khanh';
+		var name1, name2;
+		// quy tac khai bao bien:
+		// - phai bat dau bang ky tu chu or dau _, $
+		// - ten bien ko dc dung voi cac tu khoa cua JS: var, if, else, ...
+		// -ten bien phan biet hoa thuong
+		// nen dat ten bien co ngu nghia
+		// thuc hanh khai bao 3 bien, noi chuoi
+		var name = 'khanh';
+		var age = '30';
+		var address = 'minh khanh tu liem ha noi';
+		// su dung ham documnet.wirte de hien thi noi dung ra man hinh, su dung toan tu + de noi chuoi trong js
+		document.write('Name:' + name + '<br />');
+		document.write('Age:' + age + '<br />');
+		document.write('Address:' + address );
+		// 2- Hang
+		// + la 1 loai bien, ty nhien ko the thay doi gia tri cua hang mot khi da khai bao
+		// + khai bao: su dung tu khoaa: const
+		// + ten hang nen viet hoa
+		const PI = 23;
+		const NAME = 'abc';
+		// co tinh gan lai gia tri khac cho hang se bao loi
+		// PI = 1;
+		// 3 - kieu du lieu trong js
+		// + number: kieu so gom so nguyen vs so thap phan
+		var number1 = -30.03;
+		// su dung ham typeof de kiem tra kieu du lieu cua bien
+		console.log(typeof number1);
+		// + string: kieu chuoi, su dung ky tu '' or "" de bao lay gia tri
+		var string1 = ' var kieu string';
+		var string2 = "va kieu string dau nhay kep";
+		var string3 = "hello, 'khanh";
+		console.log(typeof string3);
+		// + boolean: kieu du lieu dung/sai, chi co 2 gia tri duy nhat: true, false --> 2 gia tri phai viet thuong.
+		var bool1 = true;
+		// var bool2 = False;   //gia tri nay sai
+		console.log(typeof bool1);
+		// 3 kieu du lieu: number, string, boolean: goi la 3 kieu du lieu nguyen thuy --> co the tinh toan, noois them.
+		// undefined: sinh ra khi khai bao bien ma ko gan gia tri cho no:
+		var unname;
+		console.log(typeof unname); //undefined
+		// + null: co gia tri duy nhat la null, co bien nhung ko co gia tri;
+		var null1 = null;
+		console.log(typeof null1);
+		// + array: kieu mang, la kieu du lieu co cau truc, mang co the chua nhieu gia tri ben trong.
+		var arr = [1, 'abc', true, null, [1, 2, 3]];
+		// se ko thao tac voi mang trong noi dung khoa hoc
+		// kieu mang torng JS ve ban chat la 1 object.
+		// + object: kieu doi tuong, 1 doi tuong se co thuoc tinh vs phuong thuc.
+		console.log(typeof arr);
+		var person = {
+			name: 'khanh',
+			age: 30,
+			run: function(){
+				console.log('run');
+			}
+		};
+
+		// 4- ham - function
+		// + ham la khoi lenh, de xu ly 1 tac vu gi do
+		// + ham co tinh su dung laij
+		// + ham co 2 kieu: ham tu dinh nghia cua ngon ngu lap trinh, vs ham tu dinh nghia boi programer
+		// + ham tu dinh nghia: la ham do mik tu viet ra.
+		// cu phap: 
+		function showinfo() {
+			console.log('code ben trong ham');
+		}
+		// quy tacc dat ten ham: giong qy tac dat ten bien.
+		// luon phai co buoc goi ham de thuc thi code ban trong ham.
+		// de goi ham, truyen gia tri cho tham so neu ham co tham so
+		showinfo(); //code ben trong ham
+		// cac bien the cua ham:
+		//  ham co tham so:
+		// vd: ham tinh tong cua 2 so --> do ko biet 2 so do cu the la gi, nen se coi la 2 tham so cua ham.
+		function sum(number1, number2) {
+			var sum = number2 + number1;
+			console.log(sum);
+		}
+		//  goi ham, neu ham co tham so thi khi goi ham cung phai truyen gia tri tuong ung cho tham so do , truyen gia tri that cho tham so
+		sum(1, 2); //3
+		sum(900000, 1000065565);
+		// sum(12, q);
+		// ham co tham so the hien cho tinh su dung lai
+		// ham co gia tri tra ve, su dung tu khoa return ben trong ham
+		// vd: itnh tong 2 so, xay dung ham:
+		function sumTest(num1, num2) {
+			var sum = num1 + num2
+			return sum;
+			// tinh chat cua tu khoa return: ket thuc ham, lam cho ham co gia tri nao do, tat ca cac code ben trong ham nam sau tu khoa return se ko dc thuc thi.
+			// co gang phan tich yeu cau de bai de xem no tra ve gia tri nao hay ko, de su dung tu khoa return cho phu hop.
+		};
+		// goi ham, neu ham co su dung return se linh hoat hon trong viecj thao tac gia tri do
+		var sumkhanhnt = sumTest(10, 11);
+		console.log(sumkhanhnt);
+		sumkhanhnt = sumkhanhnt + 2;
+		console.log(sumkhanhnt);
+		sumkhanhnt = sumkhanhnt + 11;
+		console.log(sumkhanhnt);
+		// viet ham hien thi ten cua user:
+		function showName(name){
+			// console.log
+			var result = 'ten cua ban:' + name;
+			return result;
+			// doan code ben duoi ko bao gio dc hay
+			console.log('abc');
+		};
+		// goi ham:
+		var result = showName('khanh');
+		console.log(result);
+		console.log(typeof result);
+		// 5 - 1 so ham co san trong js:
+		// hien thi text ra man hinh trong 1 doc moi
+		document.write('noi dung hien thi ra 1 doc moi');
+		console.log('test');
+		// ham hien thi noi dung trong tab console
+		// ham show alert:
+		// alert('show aler');
+		//  lay thong tin duoi dang cac input nhap:
+		// var name = prompt('nhap ten cua ban');
+		// console.log('ten vua nhap: ' + name);
+		// hien thi text duoi dang xac nhan, thuong su dung cho chuc nang xoa:
+		// var is_confirm = confirm('ban muon xoa chu, that ko');
+		// console.log(is_confirm);
+
+		// 6 - cac su kien trong js:
+		// demo su kien: onclick:
+		var x,y,z;
+		x = 10;
+		y = 'a';
+		z = x +y;
+		console.log(z);
+		console.log(typeof z);
+
+
+
+
+	</script>
+	<!-- ko goi su kein onclick inline trong the -->
+	<h1 id="h1-click"> click the h1 de show alert</h1>
+	<script type="text/javascript">
+		// xu ly code js de khi click vao the h1 dang co id=h1-click thi show alert
+		//  can lay ra doi tuong muon goi su kien click truoc:
+		// de don gian luon khai bao id cho cac phan tu html de thao tac lay duoi tuong cho don gian:
+		// day la buoc lay doi tuong html, muon tuong tac:
+		var obj_click = document.getElementById('h1-click');
+		console.log(obj_click);
+		console.log(typeof obj_click);
+		// gan su kien onclick vao doi tuong vua lay dc:
+		obj_click.addEventListener('click', function(){
+			// code ben trong ham callback
+			// ham nay dc goi la ham callback, -- callback chi dc thuc thi khi su kien truoc no xay ra
+			alert('alert');
+		});
+		// chu y bo tu on trong onlick khi truyen vao ham
+	</script>
+</body>
+</html>

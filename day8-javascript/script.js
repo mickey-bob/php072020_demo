@@ -1,0 +1,1 @@
+console.log('CODE js trong file .js');
