@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo-event-js</title>
+</head>
+<body>
+<!-- 
+1- defination: su kien la 1 hanh dong tu user, tac dong vao html tren trang web
+js cung cap san 1 bo cac su kien de lay cac hanh vi of user: click, hover, phim ...
++ de gan dc su kien cho 1 doi tuong html, co the su dung ham sau: addEventListener
++ Demo tung su kien trong JS
+
+ -->
+ <a href="" id="a-click"> Click the a de show alert</a>
+
+ <a href="" onclick="alert('click the a, event dc gan truc tiep vao the a')"></a>
+ <!-- ko nen su dung khai bao js nhu tren, ko linh hoat su dung -->
+ <script type="text/javascript">
+ 	// 1-demo event onclick:
+ 	var obj_click = document.getElementById('a-click');
+ 	//  khai bao ham dung lam ham callback cho event gan vao doi tuong vua lay dc.
+ 	// ham callback: ham se thuc thi sau khi su kien truoc no xay ra xong.
+ 	//  ham callback trong js thuong ko co tham so nao
+ 	function clickShowAlert(){
+ 		alert('ban da click');
+ 	}
+ 	// gan cho su kien tren event click
+ 	// luu y khi goi ham callback, se ko truyen vao cap () nhu luc goi ham b.thuong.
+ 	// obj_click.addEventListener('click', clickShowAlert);
+
+ 	// cach 2_ khai bao hang cacllback ngay trong khai bao
+ 	obj_click.addEventListener('click', function(){
+ 		alert('ban da click vao the a');
+ 	});
+
+
+ </script>
+
+ <select id="select-onchange">
+ 	<option value="1">Viet nam</option>
+ 	<option value="2">Korean</option>
+ 	<option value="3">Usa</option>
+ 	
+ </select>
+
+ <span id="span-hover">
+ 	hover qua the nay de doi mau nen, bo hover se tro ve mau ban dau
+ </span>
+
+<!-- 
++ event: onchange: xay ar khi thay doi gia tri cua 1 phan tu html, thuong chi ap dung vs 3
+the html: select, input type=radia, input type=checked
++ lay ra doi tuong html muon tuong tac
++ gan su kien
+ -->
+<!--4 - event: onmouseenteer vs onmouseleave: goiong vs onmouseover vs onmouseout
+
+--5: su kien onload: thuong code JS luon phai dat ben duoi html, tuy nhien co the dat code js
+o dau cung dc -- su dung event onload cua js.
+	+ ban chat: cho html css tai xong thi moi chay code js ben trong event. 
+ -->
+ <script type="text/javascript">
+ 	// var obj_a_onload = document.getElementById('a-onload');
+ 	// obj_a_onload.addEventListener('click', function(){
+ 	// 	alert('da dung event : onload thanh cong, kikiki');
+ 	// });
+ // de code tren ko bi loi, co 2 cach de fix:
+ // 1- chuyen code html len tren code js
+ // 2- chuyen code js tren vao trong su kien onload
+ // voi su kien onload, thuong se gan cho chinh trinh duyet, the hien qua doi tuong window.
+
+ 	window.addEventListener('load', function(){
+		var obj_a_onload = document.getElementById('a-onload');
+ 			obj_a_onload.addEventListener('click', function(){
+ 			alert('da dung event : onload thanh cong, kikiki');
+ 		});
+
+ 	});
+ // thuc te tat ca code js thuong se duoc dat trong su kein onload nay, de dam bao code js luon chay sau cung, tuong duong jquery: $(documnet).ready
+ </script>
+ <a href="" id="a-onload">
+ 	click the a de show alert  --> su dung:event: onload de dat vi tri code js o dau cung dc nhe, kekeke
+ </a>
+ <script type="text/javascript">
+ 	var obj_change = document.getElementById('select-onchange');
+ 	obj_change.addEventListener('change', function(){
+ 		console.log('value:' + this.value);
+ 		// lay noi dung cua the option
+ 		console.log('noi dung: ' + this.innerHTML);
+ 		var selected = this.options[this.selectedIndex].text;
+ 		console.log('ban vua chon: ' + selected);
+ 	});
+ 	// lay gia tri cua thuoc tinh option tuong ung dc chon
+ 	// su kien onmouover vs onmauout : re chuot ra vs khoi phan tu
+ 	// 
+ 	var obj_span = document.getElementById('span-hover');
+ 	// gan su kien cho doi tuong tren, addEventListener
+ 	obj_span.addEventListener('mouseover', function(){
+ 		// thay doi mau nen cho doi tuong:
+ 		this.style = "background: blue";
+ 	});
+ 	// + gan su kien onmouseout cho doi tuong tren:
+ 	obj_span.addEventListener('mouseout', function(){
+ 		this.style = 'background: #fff'
+ 	});
+
+ </script>
+
+<br>
+<input type="text" name="" value="" placeholder="" id="input-keyup">
+ <!-- 
+6- su kien onkeyup: xay ra khi nhan phim tren ban phim, sau khi nhar phims ra.
+  -->
+
+<input type="number" name="" id="input-keydown">
+<br>
+<form action="" method="post" id="form-submit">
+	Nhap ten: <input type="text" name="" id="name">
+	<br>
+	Nhap tuoi: <input type="number" name="" id="age">
+	<br>
+	<input type="submit" name="" value="submit vs show t.tin">
+</form>
+<!-- khai bao vung chua ket qua -->
+<h3 id="result"></h3>
+<script type="text/javascript">
+	var obj_keyup = document.getElementById('input-keyup');
+	obj_keyup.addEventListener('keyup', function(){
+		var value=this.value;
+		console.log(value);
+	});
+	// demo keydown
+	var obj_keydown=document.getElementById('input-keydown');
+	obj_keydown.addEventListener('keydown', function(){
+		var value=this.value
+		console.log(value);
+	});
+// 8-evnet: onfocus/onblur
+// + onfocus:khi con tro chuot dang o trong 1 input thi su kien se dc goi
+// + onfocus:khi con tro chuot dang o ngoai 1 input thi su kien se dc goi
+
+// 9- event: onsubmit - chi ap dung cho the form. Xay ra khi click nut submit or
+//  dung trong 1 input va enter.
+	var obj_form=document.getElementById('form-submit');
+	obj_form.addEventListener('submit', function(){
+		// alert('submit oke')
+	// lay du lieu input vs show ra man hinh.
+	var obj_name=document.getElementById('name');
+	var name=obj_name.value;
+	// lay ra gia tri cua input nhap tuoi
+	var obj_age=document.getElementById('age');
+	var age=obj_age.value;
+	// set noi dung cho the H3:
+	var obj_result=document.getElementById('result');
+	obj_result.innerHTML="Ten:" + name + '<br/>' + "tuoi:" + age;
+	event.preventDefault();
+	});
+
+// ngan chan hanh vi mac dinh coa form la tai lai trang bang cach su dung
+// 1 bien toan cuc cua js ten la event
+// bien event nay chi ton tai trong ham callback khi gan su kien cho doi tuong do.
+// event.preventDefault();
+// voi JS, can tich vao chuc nang sau de cac log lien quan den loi luon giu lai
+// khi trang bi reload, tai lai Setting nhu sau: tab console -- banh rang - check:
+// checkbox: preserved log.
+</script>
+</body>
+</html>
