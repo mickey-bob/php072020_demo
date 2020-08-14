@@ -37,9 +37,9 @@ js cung cap san 1 bo cac su kien de lay cac hanh vi of user: click, hover, phim 
  </script>
 
  <select id="select-onchange">
- 	<option value="1">Viet nam</option>
- 	<option value="2">Korean</option>
- 	<option value="3">Usa</option>
+ 	<option value="10">Viet nam</option>
+ 	<option value="20">Korean</option>
+ 	<option value="30">Usa</option>
  	
  </select>
 
@@ -49,7 +49,7 @@ js cung cap san 1 bo cac su kien de lay cac hanh vi of user: click, hover, phim 
 
 <!-- 
 + event: onchange: xay ar khi thay doi gia tri cua 1 phan tu html, thuong chi ap dung vs 3
-the html: select, input type=radia, input type=checked
+the html: select, input type=radio, input type=checked
 + lay ra doi tuong html muon tuong tac
 + gan su kien
  -->
@@ -97,7 +97,7 @@ o dau cung dc -- su dung event onload cua js.
  	// gan su kien cho doi tuong tren, addEventListener
  	obj_span.addEventListener('mouseover', function(){
  		// thay doi mau nen cho doi tuong:
- 		this.style = "background: blue";
+ 		this.style = "background:blue";
  	});
  	// + gan su kien onmouseout cho doi tuong tren:
  	obj_span.addEventListener('mouseout', function(){
