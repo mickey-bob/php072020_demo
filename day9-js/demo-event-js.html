@@ -144,16 +144,17 @@ o dau cung dc -- su dung event onload cua js.
 	var obj_form=document.getElementById('form-submit');
 	obj_form.addEventListener('submit', function(){
 		// alert('submit oke')
-	// lay du lieu input vs show ra man hinh.
-	var obj_name=document.getElementById('name');
-	var name=obj_name.value;
-	// lay ra gia tri cua input nhap tuoi
-	var obj_age=document.getElementById('age');
-	var age=obj_age.value;
-	// set noi dung cho the H3:
-	var obj_result=document.getElementById('result');
-	obj_result.innerHTML="Ten:" + name + '<br/>' + "tuoi:" + age;
-	event.preventDefault();
+		// lay du lieu input vs show ra man hinh.
+		var obj_name=document.getElementById('name');
+		var name=obj_name.value;
+		// lay ra gia tri cua input nhap tuoi
+		var obj_age=document.getElementById('age');
+		var age=obj_age.value;
+		// set noi dung cho the H3:
+		var obj_result=document.getElementById('result');
+		obj_result.innerHTML="Ten:" + name + '<br/>' + "tuoi:" + age;
+		// alert("Ten:" + name + "tuoi:" + age);
+		event.preventDefault();
 	});
 
 // ngan chan hanh vi mac dinh coa form la tai lai trang bang cach su dung

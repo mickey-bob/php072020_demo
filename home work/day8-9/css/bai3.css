@@ -1,0 +1,23 @@
+.main-form {
+    width: 50%;
+    margin: auto;
+}
+h2 {
+    background: #FEFFED;
+    text-align: center;
+    margin: 10px;
+}
+.form-group {
+    width: 80%;
+    margin: auto;
+}
+.main-form {
+    border: 1px solid;
+}
+button.btn.btn-primary {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
