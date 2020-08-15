@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai6 vs radio event</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bai6.css">
+</head>
+<body>
+	Nhập tên: <input type="text" name="" id="input-id">
+	<script type="text/javascript">
+		var js_input = document.getElementById('input-id');
+		js_input.addEventListener('keyup',function(){
+			alert('Chuoi ban dang nhap la:' + js_input.value);
+		});
+	</script>
+	<br>
+
+	đực:<input type="radio" name="sex" value="female" id="id-duc">
+	<br>
+	cái: <input type="radio" name="sex" value="male" id="id-cai">
+	<script type="text/javascript">
+		var js_radio_duc = document.getElementById('id-duc');
+		var js_radio_cai = document.getElementById('id-cai');
+		// js_radio.name = 'name-js';
+		console.log(js_radio_duc.checked);
+		console.log(js_radio_cai.checked);
+		js_radio_duc.addEventListener('click', function(){
+			alert ('Ban vua chon radio: duc');
+
+		});
+		js_radio_cai.addEventListener('click', function(){
+			alert ('Ban vua chon radio: cai');
+			
+		});
+		// if (js_radio_duc.checked) {
+		// 	alert ('ban vua chon radio: duc');
+		// } else if (js_radio_cai.checked) {
+		// 	alert ('ban vua chon radio: cai');
+		// }
+
+	</script>
+</body>
+</html>
