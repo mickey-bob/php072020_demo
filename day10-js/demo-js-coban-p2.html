@@ -99,10 +99,10 @@
 		if (number >=8 && number <= 10) {
 			console.log("Gioi qua roi")
 		}
-			elseif (number >= 6.5) {
+			else if (number >= 6.5) {
 				console.log("kha thoi nhe");
 			}
-			elseif (number >= 5) {
+			else if (number >= 5) {
 				console.log("trung binh nhes");
 			}
 		 else {
@@ -162,13 +162,13 @@
 	// 1234
 	// - Continue: chi bo qua lan lap hien tai, nhay toi lan lap ke tiep
 	for ( var j = 1; j <= 10; j++) {
-		if (i ==3 || j < 3){
+		if (j ==3 || j < 3){
 			continue;
 		}
 		console.log(j);
 
 	}
-	//345678910
+	//45678910
 	</script>
 	<h1>Form cong 2 so</h1>
 	<!-- khai bao vung hien thi error or successed neu co -->
@@ -212,7 +212,7 @@
 				obj_number2.focus();
 			}
 			// de kiem tra gia tri co phai so hay ko su dung ham isNan - is not a number
-			elseif (isNaN(number1) || isNaN(number2) ){
+			else if (isNaN(number1) || isNaN(number2) ){
 				// default so sanh true: isNan(number1) ==true
 				error = "phai nhap so";
 			}
@@ -221,8 +221,8 @@
 				// chu y: du lieu tu input cua form mac dinh dang co kieu string, ko phai number
 				// nen khi cong 2 so de hieu la noi 2 string
 				// can ep kieu sang kieu so, number
-				number1 = parse(number1);
-				number2 = parse(number2);
+				number1 = parseInt(number1);
+				number2 = parseInt(number2);
 				var sum = number1 + number2;
 				result = 'Tong: ' + sum;
 			}
