@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai 1 ngay 10</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+</head>
+<body>
+	<form action="" method="POST" id="form-id">
+	<h3 id="result-id"></h3>
+	<h3 id="error-id"></h3>
+	Nhap so a vao day: <input type="text" name="" id="id-a">
+	<br>
+	Nhap so b vao day: <input type="text" name="" id="id-b">
+	<br>
+	<button type="submit" class="btn btn-success" id="sum-id" >a + b</button>
+	</form>
+
+	<script type="text/javascript">
+		// var result = '';
+		// var error = '';
+		// var obj_a = document.getElementById('id-a');
+		// var a = obj_a.value;
+		// var obj_b = document.getElementById('id-b');
+		// var b = obj_b.value;
+		var obj_sum = document.getElementById('form-id');
+		// console.log(obj_a.value);
+		// 	console.log(b);
+		obj_sum.addEventListener('submit', function (){
+		var result = '';
+		var error = '';
+		var obj_a = document.getElementById('id-a');
+		var a = obj_a.value;
+		var obj_b = document.getElementById('id-b');
+		var b = obj_b.value;
+		
+		console.log(obj_a.value);
+			console.log(b);
+			if (a == '') {
+				error = ' Khong duoc de trong so a';
+				obj_a.focus();
+			} else if (b == ''){
+				error = ' Khong duoc de trong so b';
+				obj_b.focus();
+			}
+			  else if ( isNaN(a) || isNaN(b)){
+			  	error = 'Yeu cau phai nhap so, khong duoc nhap linh tinh';
+			  	obj_a.focus();
+			}
+			if (error = '') {
+				a = parseInt(a);
+				b = parseInt(b);
+				result = 'Tong: ' + a + b;
+			}
+			document.getElementById('result-id').innerHTML = result;
+			document.getElementById('error-id').innerHTML = error;
+			event.preventDefault();
+		});
+
+	</script>
+</body>
+</html>
