@@ -192,6 +192,7 @@
 		// lay doi tuong theo id, getelement
 		var obj_form = document.getElementById('form');
 		// gan su kien submit cho doi tuong form tren
+		console.log(obj_form);
 		obj_form.addEventListener('submit', function(){
 			// alert ('test submit form');
 			// quy tirnh xu ly form don gian:
@@ -205,10 +206,13 @@
 			// lay gia tri cua so thu hai:
 			var obj_number2 = document.getElementById('number2');
 			var number2 = obj_number2.value;
+			console.log(number1);
+			console.log(number2);
 			// + validate form: ko dc de trong truong vs phai nhap so
 			if (number1 == '') {
 				error = 'number1 ko dc de trong';
 				// xu ly de focus vao dung input dang loi de user do phai click vao
+				// alert('alert number1 ko co gi, rong');
 				obj_number1.focus();
 
 			} else if (number2 == ''){

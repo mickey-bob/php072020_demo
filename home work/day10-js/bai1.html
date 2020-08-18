@@ -7,14 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 </head>
 <body>
-	<form action="" method="POST" id="form-id">
-	<h3 id="result-id"></h3>
-	<h3 id="error-id"></h3>
-	Nhap so a vao day: <input type="text" name="" id="id-a">
-	<br>
-	Nhap so b vao day: <input type="text" name="" id="id-b">
-	<br>
-	<button type="submit" class="btn btn-success" id="sum-id" >a + b</button>
+	<h1>Bai 1</h1>
+	<h3 style="color: blue" id="result-id"></h3>
+	<h3 style="color: red" id="error-id"></h3>
+	<form action="" method="" id="form-id">
+		Nhap so a vao day: <input type="text" name="" id="id-a">
+		<br>
+		Nhap so b vao day: <input type="text" name="" id="id-b">
+		<br>
+		<!-- <button type="submit" class="btn btn-success" id="sum-id" >a + b</button> -->
+		<input type="submit" name="" value=" click to cong">
 	</form>
 
 	<script type="text/javascript">
@@ -26,19 +28,20 @@
 		// var b = obj_b.value;
 		var obj_sum = document.getElementById('form-id');
 		// console.log(obj_a.value);
-		// 	console.log(b);
-		obj_sum.addEventListener('submit', function (){
-		var result = '';
-		var error = '';
-		var obj_a = document.getElementById('id-a');
-		var a = obj_a.value;
-		var obj_b = document.getElementById('id-b');
-		var b = obj_b.value;
-		
-		console.log(obj_a.value);
+			console.log(obj_sum);
+		obj_sum.addEventListener('submit', function(){
+			var result = '';
+			var error = '';
+			var obj_a = document.getElementById('id-a');
+			var a = obj_a.value;
+			var obj_b = document.getElementById('id-b');
+			var b = obj_b.value;
+			
+			console.log(a);
 			console.log(b);
 			if (a == '') {
 				error = ' Khong duoc de trong so a';
+				alert('oi gioi oi kho qua');
 				obj_a.focus();
 			} else if (b == ''){
 				error = ' Khong duoc de trong so b';
@@ -51,8 +54,11 @@
 			if (error = '') {
 				a = parseInt(a);
 				b = parseInt(b);
-				result = 'Tong: ' + a + b;
+				var sum = a + b;
+				result = 'Tong: ' + sum;
 			}
+			console.log(result);
+			console.log(error);
 			document.getElementById('result-id').innerHTML = result;
 			document.getElementById('error-id').innerHTML = error;
 			event.preventDefault();
