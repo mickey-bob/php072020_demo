@@ -15,8 +15,10 @@
 		<br>
 		Nhap so b vao day: <input type="text" name="" id="id-b">
 		<br>
-		<!-- <button type="submit" class="btn btn-success" id="sum-id" >a + b</button> -->
-		<input type="submit" name="" value=" click to cong">
+		<button type="submit" class="btn btn-success" id="sum-id" >a + b</button>
+		<button type="submit" class="btn btn-success" id="reset-id" >reset data</button>
+
+		<!-- <input type="submit" name="" value=" click to cong"> -->
 	</form>
 
 	<script type="text/javascript">
@@ -26,10 +28,11 @@
 		// var a = obj_a.value;
 		// var obj_b = document.getElementById('id-b');
 		// var b = obj_b.value;
-		var obj_sum = document.getElementById('form-id');
+		var obj_sum = document.getElementById('sum-id');
+		var obj_reset = document.getElementById('reset-id');
 		// console.log(obj_a.value);
 			console.log(obj_sum);
-		obj_sum.addEventListener('submit', function(){
+		obj_sum.addEventListener('click', function(){
 			var result = '';
 			var error = '';
 			var obj_a = document.getElementById('id-a');
@@ -41,20 +44,26 @@
 			console.log(b);
 			if (a == '') {
 				error = ' Khong duoc de trong so a';
-				alert('oi gioi oi kho qua');
+				// alert(' test inside if conditions');
+				// console.log(error);
 				obj_a.focus();
 			} else if (b == ''){
 				error = ' Khong duoc de trong so b';
+				// alert(b);
+				console.log(error);
+				// console.log(b);
 				obj_b.focus();
 			}
 			  else if ( isNaN(a) || isNaN(b)){
-			  	error = 'Yeu cau phai nhap so, khong duoc nhap linh tinh';
+			  	error = 'Yeu cau phai nhap so, ko dc nhap linh tinh';
 			  	obj_a.focus();
+			  	console.log(error);
 			}
-			if (error = '') {
+			if (error == '') {
 				a = parseInt(a);
 				b = parseInt(b);
 				var sum = a + b;
+				// console.log(a);
 				result = 'Tong: ' + sum;
 			}
 			console.log(result);
@@ -63,6 +72,14 @@
 			document.getElementById('error-id').innerHTML = error;
 			event.preventDefault();
 		});
+
+		// code reset data
+		obj_reset.addEventListener('click', function(){
+			document.getElementById('id-a').innerHTML = '';
+			document.getElementById('id-b').innerHTML = '';
+			event.preventDefault();
+		});
+
 
 	</script>
 </body>
