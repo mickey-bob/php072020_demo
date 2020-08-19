@@ -18,65 +18,81 @@
 		<button type="submit" class="btn btn-success" id="sum-id" >a + b</button>
 		<button type="submit" class="btn btn-success" id="reset-id" >reset data</button>
 
+
 		<!-- <input type="submit" name="" value=" click to cong"> -->
 	</form>
 
 	<script type="text/javascript">
 		// var result = '';
 		// var error = '';
-		// var obj_a = document.getElementById('id-a');
+		var obj_a = document.getElementById('id-a');
 		// var a = obj_a.value;
-		// var obj_b = document.getElementById('id-b');
+		var obj_b = document.getElementById('id-b');
 		// var b = obj_b.value;
 		var obj_sum = document.getElementById('sum-id');
 		var obj_reset = document.getElementById('reset-id');
 		// console.log(obj_a.value);
-			console.log(obj_sum);
-		obj_sum.addEventListener('click', function(){
-			var result = '';
+		console.log(obj_sum);
+		function verify_ab(a, b){
 			var error = '';
-			var obj_a = document.getElementById('id-a');
-			var a = obj_a.value;
-			var obj_b = document.getElementById('id-b');
-			var b = obj_b.value;
-			
-			console.log(a);
-			console.log(b);
 			if (a == '') {
 				error = ' Khong duoc de trong so a';
 				// alert(' test inside if conditions');
 				// console.log(error);
 				obj_a.focus();
+				// return error;
 			} else if (b == ''){
 				error = ' Khong duoc de trong so b';
 				// alert(b);
-				console.log(error);
+				// console.log(error);
 				// console.log(b);
 				obj_b.focus();
+				// return error;
 			}
 			  else if ( isNaN(a) || isNaN(b)){
 			  	error = 'Yeu cau phai nhap so, ko dc nhap linh tinh';
 			  	obj_a.focus();
-			  	console.log(error);
+			  	// console.log(error);
+			  	// return error;
 			}
-			if (error == '') {
-				a = parseInt(a);
-				b = parseInt(b);
-				var sum = a + b;
-				// console.log(a);
+			return error;
+		}
+		obj_sum.addEventListener('click', function(){
+			var result = '';
+			var error1 = '';
+			// var obj_a = document.getElementById('id-a');
+			var a1 = obj_a.value;
+			// var obj_b = document.getElementById('id-b');
+			var b1 = obj_b.value;
+			
+			console.log(a1);
+			console.log(b1);
+			
+			error1 = verify_ab (a1, b1);
+			console.log(error1);
+			if (error1 == '') {
+				a1 = parseInt(a1);
+				b1 = parseInt(b1);
+				var sum = a1 + b1;
+				 console.log(sum);
 				result = 'Tong: ' + sum;
 			}
 			console.log(result);
-			console.log(error);
+			console.log(error1);
 			document.getElementById('result-id').innerHTML = result;
-			document.getElementById('error-id').innerHTML = error;
+			document.getElementById('error-id').innerHTML = error1;
 			event.preventDefault();
 		});
 
 		// code reset data
 		obj_reset.addEventListener('click', function(){
-			document.getElementById('id-a').innerHTML = '';
-			document.getElementById('id-b').innerHTML = '';
+			// alert('test inside reset function');
+			var result = '';
+			var error = '';
+			document.getElementById('result-id').innerHTML = result;
+			document.getElementById('error-id').innerHTML = error;
+			document.getElementById('id-a').value = '';
+			document.getElementById('id-b').value = '';
 			event.preventDefault();
 		});
 
