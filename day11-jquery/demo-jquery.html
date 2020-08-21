@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>demo jquery </title>
+</head>
+<body>
+	<script type="text/javascript">
+		//1- khai niem:
+		// la thu vien viet dua tren js
+		// giup thao tac vs js don gian hon.
+		// hau het website viet vs PHp deu tich hop jquery vs bootstrap cua CSS.
+		// 2 - cai dat: file dac trung duy nhat cua thu vien jquery: jquery.min.js
+		// + download tu trang chu cua jquery
+		// + dng link cdn, link online.
+		// 3- tich hop jquery vao he thong, nhug file jquery vao web.
+	</script>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//4 - chuong trinh jquery dau tien
+		// + code jquery dc nhan biet thong qua ky tu $ or jquery.
+		// + luon viet code ben trong ham ready cua document ---> de dam bao ham ready
+		// luon chay sau cung, ham ready tuong duong vs su kien: onload cua js
+		$(document).ready(function(){
+			console.log('Heello Mickey');
+		});
+		// 5 - DOM: Document object model.
+		// Dom la cay HTML - cau truc html.
+		// 6- cac module chinh cua jquery:
+		// + hoc thuoc la chinh.
+		// + module jquery selector: giong nhu selector trong css.
+		// selector se xac dinh doi tuong HTML se thao tac.
+		// 1 so kieu selector: id - class, ten the, cap cha con, trang thai the, thuoc tinh the ...
+		// ngoai ra jquery con co them cac ham de lay ra dc selector:
+	</script>
+
+	<h1 id="h1-selector">The h1 vs id=h1-selector</h1>
+	<h2 class="h2-class"> tHE H2</h2>
+	<input type="text" name="" value="123">
+	<input type="number" name="" value="456">
+	<div id="find">
+		<input type="text" name="">
+		<input type="number" name="">
+		<input type="email" name="">
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			// + ham find: tim cac selector con chau trong thanh phan cha.
+			$('#find').find('input[type=text]');
+			// + ham parent: lay thanh phan cha truc tiep/gan nhat cua selector hien tai
+			$('input[type=email]').parent();
+			// tra ve doi tuong la div co id=find;
+			// + ham parents: lay tat ca thanh phan cha cua selector hien tai:
+			// $('selector').parents();
+			// + ham children: tim tat ca thanh pahn la con truc tiep/gan nhat trong thanh pahn cha:
+			// $('selector').children('selector');
+			// + ham next: lay ra selector ngang hang, nam phia sau selector hien tai:
+			// $('selector').next();
+			// + ham nextAll: lay ra tat ca selector ngang hang, nam phia sau selector hien tai.
+			// $('selector').nextAll('selector');
+			// + ham prev vs prevAll: nguoc lai so voi next vs nextAll
+
+			$('input[type=text]');
+			var obj1 = $('.h2-class');
+			console.log(obj1);
+		});
+		// + lay doi tuong su dung js
+		var obj_h1 = document.getElementById('h1-selector');
+		obj_h1.innerHTML = 'NEW';
+		// + lay doi tuong su dung jquery:
+		$('#h1-selector');
+		$('#h1-selector').html('NEW');
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//2: Module jquery attribute:
+			// thao tac vs cac thuoc tinh cua HTML:
+			// + GET gia tri cua thuoc tinh: attr(name)
+			var href = $('#a-attr').attr('href');
+			console.log(href);
+			var target = $('#a-attr').attr('target');
+			// set gia tri cho thuoc tinh: attr(name,value);
+			$('#a-attr').attr('href', '#');
+			// + xoa thuoc tinh: removeAttr(name)
+			$('#a-attr').removeAttr('target');
+			// + kiem tra xem co class hay ko dua vao ten class:hasClass(class-name)
+			var check = $('#a-attr').hasClass('class1');
+			console.log(check); //false
+			// + xoa class: removeClass(class-name)
+			$('#a-attr').removeClass('class3');
+			// + css cho duuoi tuong : css(name, value);
+			$('#a-attr').css('color', 'red');
+			// + set noi dung cho doi tuong: html(value), text(value)
+			$('#a-attr').html('noi dungmoi cho the a');
+			// + get noi dung: html(); text()
+			$('#a-attr').html();
+			// + get/set gia tri cho 1 input
+			// van co the lay gia tri input su dung ham attr, tuy nhien voi input co 1 ham thong dung hon: val
+			var value = $('#input-attr').val();
+
+			// set gia tri:
+			var value = $('#input-attr').val('abc1234');
+
+			// 3- jquery dom: thao tac voi cay DOM
+			// + XOA phan tu: selector.remove()
+			// $('#input-attr').remove();
+			// + them phan tu vao sau vs ngang hang selector hien tai: selector.after(element)
+			$('#input-attr').after('<b>The b phia sau</b>');
+			$('#input-attr').before('<b>the b phi truoc</b>')
+			// + them phan tu vao noi dung ben trong cua selector: append, prepend
+			// selector.append(element);
+			// selector.prepend(element);
+			// 4 - jquery event: xu ly su kien
+			// jquery viet lai cac ham goi su kien cua js, jquery lay ten su kien lam ten ham luon
+			$('#a-attr').click(function(){
+				alert('click');
+				// eventpreventDefault()
+			});
+			$('#input-attr').keyup(function(){
+				console.log($(this).val());
+			});
+
+		});
+
+	</script>
+	<input type="text" name="" value="123" id="input-attr">
+	<a href="https://google.com" target="_blank" id="a-attr" class="class1 class2 class3"> The a</a>.
+
+</body>
+</html>

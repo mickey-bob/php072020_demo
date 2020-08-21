@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test finding substring in strings</title>
+</head>
+<body>
+	kiem tra su ton tai cua chuoi:
+	<br>
+	Nhap chuoi ban dau: <input type="text" name="" id="string-check">
+	<br>
+	Nhap chuoi kiem tra: <input type="text" name="" id="string-sub">
+	<br>
+	<button id="check">Check strings</button>
+	<h3 id="result"></h3>
+
+	<!-- script -->
+	<script type="text/javascript">
+		var obj_in_string = document.getElementById('string-check');
+		var obj_sub_string = document.getElementById('string-sub');
+		document.getElementById('check').addEventListener('click', function(){
+			var in_string = obj_in_string.value;
+			var sub_string = obj_sub_string.value;
+			var n = in_string.includes(sub_string);
+			console.log(typeof in_string);
+			console.log(typeof sub_string);
+			console.log(n);
+			if (n === true) {
+				document.getElementById('result').innerHTML = sub_string + " co trong string ban dau";
+			}
+			else {
+				document.getElementById('result').innerHTML = sub_string + " khong co trong string ban dau";
+			}
+		});
+	</script>
+</body>
+</html>

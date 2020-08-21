@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<title>chua bai 1 ngay 10</title>
+</head>
+<body>
+	<h1>chua bai tap 1</h1>
+	<form action="" method="post">
+		Nhap so a: <input type="text" name="" id="number_a">
+		<br>
+		Nhap so b: <input type="text" name="" id="number_b">
+		<br>
+		<button  id="add" type="submit">a + b</button>
+		<button id="sub" type="submit">a - b</button>
+	</form>
+	<h3 id="error"></h3>
+	<h3 id="result"></h3>
+	<script type="text/javascript">
+		// khai bao ham dung chung cho tat ca cac chuc nang:
+		function calculate(operator){
+			// xu ly form
+			// khai bao cac bien chua loi vs ket qua
+			var error = '';
+			var result = '';
+			// lay gia tri cua 2 input
+			var obj_number_a = document.getElementById('number_a');
+			var number_a = obj_number_a.value;
+			var obj_number_b = document.getElementById('number_b');
+			var number_b = obj_number_b.value;
+			// validate form - kiem tra du lieu nhap tu form:
+			// ko dc de trong 2 input
+			// phai nhap so
+			if (number_a == '') {
+				error = 'number a ko dc de trong';
+				obj_number_a.focus();
+			} else if (number_b == ""){
+				error = 'number b ko dc de trong';
+				obj_number_b.focus();
+			} else if (isNaN(number_a) || isNaN(number_b)){
+				error = "Phai nhap so";
+			}
+			// xu ly logic bai toan, chi xu ly khi ko co loi xay ra.
+			if (error == '') {
+				// thuc hien phep tinh 2 so, dua tren tham so operator cua ham.
+				// tham so opearator cua ham
+				// gia tri truyen vao cho operator: +,-
+				// vi js lay du lieu tu form co kieu du lieu la: string
+				// nen phai ep kieu:
+				number_a = parseInt(number_a);
+				number_b = parseInt(number_b);
+				switch(operator){
+					case '+':
+						result = number_a + number_b;
+						break;
+					case '-':
+						result = number_a - number_b;
+						break;
+				}
+			}
+		document.getElementById('error').innerHTML = error;
+		document.getElementById('result').innerHTML = result;
+		// ngan ngua form tai lai
+		event.preventDefault();
+		}
+
+		// hien thi loi ra man hinh:
+		// lay doi tuong cua 2 input click
+		var obj_add = document.getElementById('add');
+		obj_add.addEventListener('click', function(){
+			//lay gia tri cua 2 input,
+			//+ validate 2 gia tri: ko de trong, phai nhap so, ...
+			// cong hai so
+			// hien thi ket qua
+			calculate('+');
+		});
+		// lay doi tuong phep tru: -
+		var obj_sub = document.getElementById('sub');
+		obj_sub.addEventListener('click', function(){
+			calculate('-');
+		});
+	</script>
+</body>
+</html>
