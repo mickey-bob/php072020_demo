@@ -8,7 +8,7 @@
  <html>
  <!-- <head> dung mo ta thong tin cho trang vd: tieu de, nhung link css, js, ... -->
  	<meta charset="utf-8">
- 	<title>Tieu de trang web</title>
+ 	<title>Tieu de trang web, day 2 co ban HTML</title>
  </head>
  <body>
  <!-- the body la the chua cac noi dung se hien thu ra trinh duyet -->
@@ -76,6 +76,89 @@
 </ol>
 <!-- thẻ a - thẻ đầy đủ, link -->
 <a href="https://google.vn" target="_blank"> click vao day de chuyen huong ve google</a>
+		<!-- Các thẻ html liên quan đến form:
+	 	<form>, <input>, <textarea>, <select>, <option>
+	 	 -->
+	 	 <form>
+	 	 	Username:
+	 	 	<input type="text" />
+	 	 	Password:
+	 	 	<input type="password" />
+	 	 	<input type="submit" value="Login" />
+	 	 </form>
+	 	 <!-- Form là nơi lấy thông tin từ user, sử dụng thẻ <form> để xây dựng, luôn dùng thẻ <form> này để bao lấy các input bên trong, mặc dù về mặt hiển thị, có hay ko có thẻ <form> cũng ko ảnh hưởng gì cả 
+		 Thẻ form có các thuộc tính sau:
+		 + action: url sẽ xử lý submit form, học ở phần PHP
+		 + method: phương thức xử lý form, có 2 phương thức GET và POST
+	 	 -->
+	 	 <form action="" method="GET">
+	 	 	<!--
+	 	 	Trong form sẽ có các input để user có thể nhập liệu. Thẻ <input /> là thẻ dạng khuyết có tác dụng tạo ra các nơi nhập dữ liệu cho user, thẻ này có 1 số thuộc tính sau:
+	 	 	+ type: kiểu nhập dữ liệu, có các giá trị sau: text, number, password, reset, radio, checkbox, file,  submit, hidden
+	 	 	+ name: dùng khi code PHP
+	 	 	+ value: giá trị khởi tạo mặc định cho input đó
+	 	 	+ placeholder: là text gợi nhớ cho chức năng của input
+	 	 	+ multilpe: áp dụng cho thẻ select, input file, cho phép chọn nhiều 
+	 	 	+ selected: chọn sẵn giá trị cho thẻ <select>
+	 	 	+ checked: chọn sẵn giá trị cho radio hoặc checkbox
+	 	 	-->
+	 	 	Nhập tên:
+	 	 	<input type="text" value="Mạnh" />
+	 	 	<br />
+	 	 	Nhập tuổi:
+	 	 	<!--  -->
+	 	 	<!-- thuộc tính required: bắt buộc phải nhập thông tin vào trường đó -->
+	 	 	<input type="number" placeholder="Mời bạn nhập tuổi" required min="10" />
+	 	 	<br />
+	 	 	Nhập mật khẩu:
+	 	 	<input type="password" />
+	 	 	<br />
+	 	 	Chọn giới tính:
+	 	 	<!-- với input radio, bắt buộc phải khai báo thuộc tính name , giá trị phải trùng nhau giữa các radio, thì chức năng radio mới hoạt động chính xác đc -->
+	 	 	<input type="radio" name="gender" value="0" /> Nữ
+	 	 	<input type="radio" name="gender" value="1" /> Nam
+	 	 	<br />
+	 	 	Chọn nghề nghiệp:
+	 	 	<input type="checkbox" value="0" /> Giảng viên
+	 	 	<input type="checkbox" value="1" />
+	 	 	Developer
+	 	 	<br />
+	 	 	Upload 1 ảnh:
+	 	 	<input type="file" />
+	 	 	<br />
+	 	 	Upload nhiều ảnh cùng 1 lúc:
+	 	 	<input type="file" multiple />
+	 	 	<br />
+	 	 	Ghi chú:
+	 	 	<!-- Textarea là 1 cặp thẻ đầy đủ, chú ý ko đc để nội dung gì bên trong cặp thẻ này nếu ko có giá trị mặc định -->
+	 	 	<textarea maxlength="5" placeholder="Nhập ghi chú tại đây" cols="20" rows="8"></textarea>
+	 	 	<br />
+	 	 	Chọn quốc gia:
+	 	 	<!-- Thẻ select luôn đi kèm với các thẻ option bên trong -->
+	 	 	<select>
+	 	 		<option value="0">VN</option>
+	 	 		<option value="1">Japan</option>
+	 	 		<option value="2">USA</option>
+	 	 	</select>
+	 	 	<br />
+	 	 	Chọn nhiều quốc gia:
+	 	 	<select multiple>
+	 	 		<option value="0">VN</option>
+	 	 		<option value="1">Japan</option>
+	 	 		<option value="2">USA</option>
+	 	 	</select>
+	 	 	<!-- 1 form bao giờ cũng có 1 nút submit - nút gửi thông tin đi -->
+	 	 	<input type="submit" value="Show thông tin" />
+	 	 	<input type="reset" value="Xóa thông tin form" >
+	 	 </form>
+
+	 	 <!-- Thẻ button: thẻ đầy đủ - tạo ra nút có thể chứa text hoặc ảnh, và click đc -> khác các input trong form -->
+	 	 <button>Button</button>
+	 	 <!-- Thẻ center - chỉ dùng cho việc làm bài tập buổi 1 - căn giữa nội dung bên trong, khi học CSS thì sẽ ko dùng thẻ này nữa -->
+	 	 <center>Nội dung bị căn giữa</center>
+	 	 <!-- 1 số thẻ liên quan đến HTML5 như thẻ <header>, <article>, <aside>, <footer>, <nav> ..., thể hiện đúng ngữ nghĩa hơn cho các thành phần trên trang -->
+
  </body>
+
  </html>
 

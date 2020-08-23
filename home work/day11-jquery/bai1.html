@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bai 1 ngay 11 jquery</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	Chu vi vs dien tich chu nhat
+	<form id="id-form">
+		Nhap vao chieu dai (don vi: met)
+		<input type="text" name="" id="height">
+		<br>
+		Nhap vao chieu rong (don vi: met)
+		<input type="text" name="" id="width">
+		<br>
+		<input type="submit" name="" value="Tinh dien tich vs chu vi">
+	</form>
+	<h3 id="result_chuvi"></h3>
+	<h3 id="result_square"></h3>
+	<h3 id="error"></h3>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			function show_width_height (){
+				var result_output = '';
+				var error_output = '';
+				var height_value = $('#height').val();
+				var width_value = $('#width').val();
+				var chuvi = '';
+				var square = '';
+				if (height_value == '') {
+					// $('#result').html('Ban phai nhap du lieu chieu cao vao nhe');
+					error_output = 'Ban phai nhap du lieu chieu cao vao nhe';
+					}
+					else if (width_value == ''){
+						// $('#result').html('Ban phai nhap du lieu chieo rong vao nhe');
+						error_output = 'Ban phai nhap du lieu chieu rong vao nhe';
+					}
+					else if (isNaN(height_value) || isNaN(width_value)){
+						// $('#result').html('Ban phai nhap so vao nhe, ko ddc nhap linh tinh dau');
+						error_output = 'Ban phai nhap so vao nhe, ko dc nhap linh tinh';
+					}
+				
+				if (error_output == '') {
+					height_value = parseInt(height_value);
+					width_value = parseInt(width_value); 
+					chuvi = (height_value + width_value) * 2;
+					square = height_value*width_value;
+					
+				}
+				$('#error').html(error_output);
+				$('#result_chuvi').html('Chu vi la:' + chuvi +'m');
+				$('#result_square').html('Dien tich la: ' + square + 'm<sup>2</sup>');
+				event.preventDefault();
+
+			}
+			$('#id-form').submit(function(){
+				show_width_height();
+			});
+		});
+
+	</script>
+</body>
+</html>
