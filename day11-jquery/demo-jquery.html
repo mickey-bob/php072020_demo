@@ -97,13 +97,14 @@
 			// + set noi dung cho doi tuong: html(value), text(value)
 			$('#a-attr').html('noi dungmoi cho the a');
 			// + get noi dung: html(); text()
-			$('#a-attr').html();
+			var test = $('#a-attr').html();
+			console.log(test);
 			// + get/set gia tri cho 1 input
 			// van co the lay gia tri input su dung ham attr, tuy nhien voi input co 1 ham thong dung hon: val
 			var value = $('#input-attr').val();
 
 			// set gia tri:
-			var value = $('#input-attr').val('abc1234');
+			var value = $('#input-attr').val('noi dung value tu val() jquery');
 			console.log(value);
 
 			// 3- jquery dom: thao tac voi cay DOM
