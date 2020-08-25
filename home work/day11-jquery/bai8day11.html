@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>work8day11</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- <script type="text/javascript" src="js/bai8-day11.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bai8-day11.css">
+</head>
+<body>
+	<ul id="menu">
+		<li><a href="#">Tin tuc</a></li>
+		<li><a href="#">San pham</a>
+			<ul>
+				<li class="sub-menu"><a href="#">San pham 1</a></li>
+				<li class="sub-menu"><a href="https://anninhthudo.vn">San pham 2</a></li>
+				<li class="sub-menu"><a href="https://vnexpress.net/">San pham 3</a></li>
+				<li class="sub-menu"><a href="https://www.youtube.com">San pham 4</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Su kien</a></li>
+		<li><a href="#">Forum</a></li>
+		<li><a href="#">Hop tac</a></li>
+	</ul>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('ul#menu > li').click(function(){
+				// alert('click h3');
+				$(this).find('.sub-menu').toggle(1000);
+			});
+		});
+	</script>
+</body>
+</html>

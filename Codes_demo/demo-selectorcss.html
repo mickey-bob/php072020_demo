@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<!-- <link rel="stylesheet" type="text/css" href="js/jquery-3.4.1.min.js"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="js/demo-jquery.js"> -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/demo-jquery.js"></script>
+</head>
+<body>
+	<div id="test">
+		<ul>
+			<li><a href="#">The a1</a></li>
+			<li><a href="#">The a2</a>
+				<ul id="ul-ko-can-lay">
+					<li><a href="#">The a2-1</a></li>
+					<li><a href="#">The a2-2</a></li>
+					<li><a href="#">The a2-3</a></li>
+					<li><a href="#">The a2-4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">The a3</a></li>
+			<li><a href="#">The a4</a></li>
+		</ul>
+	</div>
+	<!-- su dung selector > : direct children, phai su dung '>' tu dau den cuoi.
+	vd sd: #test ul > li > a: cung se chon het the a, ko dung nhu muc dich la chi chon the a la con truc tiep cua li. #test ul > li > a: lay het the ul la con cua #test ---- se lay ca ul id="ul-ko-can-lay"
+	  -->
+	<style type="text/css">
+		#test > ul > li > a {    
+			color: red;
+		}
+	</style>
+	<div id="div-id">
+		<ul>
+			<li><a href="#">The a1 - test selector jquery</a></li>
+			<li><a href="#">The a2 - test selector jquery</a></li>
+			<li><a href="#">The a3 - test selector jquery</a>
+
+				<ul>
+					<li><a href="#" id="id-a">The a3-1 test selector jquery</a></li>
+					<li><a href="#">The a3-2 test selector jquery</a></li>
+					<li><a href="#">The a3-3 test selector jquery</a></li>
+					<li><a href="#">The a3-4 test selector jquery</a></li>
+				</ul>
+			</li>
+			<li><a href="#">The a4 - test selector jquery</a></li>
+		</ul>
+	</div>
+	<h3 id="id-h3" style="display: none;">show thong tin the h3</h3>
+
+</body>
+</html>

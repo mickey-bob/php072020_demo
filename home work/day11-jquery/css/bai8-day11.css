@@ -1,0 +1,20 @@
+ul {
+    list-style-type: none;
+    
+}
+li {
+    height: auto;
+    font-size: 20px;
+    background: #00BCD4;
+    width: 20%;
+    text-align: center;
+    margin: 1px;
+}
+a {
+    color: yellow;
+}
+li.sub-menu {
+    width: 100%;
+    margin-left: -10px;
+    display: none;
+}
