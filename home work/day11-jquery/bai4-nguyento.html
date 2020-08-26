@@ -30,21 +30,22 @@
 			};
 			$('#submit-form').submit(function(){
 				var number = $('#id-input').val();
-				// var i = '';
+				console.log(number);
 				var result = 'Cac so nguyen to tu 1 den '+ number + ' la:';
 				// console.log(so_nguyen(number))
 				// var x = 1;
-				for (i = 1; i <= number; i++){
-					// console.log(i);
-					var j = so_nguyen(i);
-					if (j == true) {
-						console.log('inside if');
-						// result += i + ',';
+				// var i = '';
+				for (j = 1; j <= number; j++){
+					// var j = so_nguyen(i);
 						// x += 1;
+					// console.log(x);
+					if (so_nguyen(j) == true) {
 						// console.log(x);
+						// console.log('inside if');
+						result += j + ',';
 						}
 					
-					};
+					}
 				$('#result').html(result);
 				event.preventDefault();
 				});
