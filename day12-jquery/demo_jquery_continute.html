@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo jquery continue</title>,
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 5- module jquery effect
+			// + cung cap 1 so hieu ung cho cac phan tu nhu an, hien ...
+			// + han an selector: select.hide(speed)
+			// + ham show selector: selector.show(speed)
+			$('#click-to-hide').click(function(){
+				$('#h1-show-hide').hide(5000);
+
+			});
+			$('#click-to-show').click(function(){
+				$('#h1-show-hide').show(5000);
+			});
+			$('#click-to-toggle').click(function(){
+				$('#h1-show-hide').toggle(4000);
+			});
+			// ham show/hide selector dua vao trang thai hien tai: show <->hide
+			// ham fadeIn -- fadeOut giong show-hide
+			// + ham set hhieu ung kieu tuy chon, su dung can tham khao google
+			// selector.animate(object)
+			$('#click-to-animate').click(function(){
+				// khai bao 1 object:
+				var properties = {
+					width: '70%',
+					opacity: 0.3,
+					marginLeft: '70px',
+					fontSize: '60px',
+					borderWidth: '20px'
+				};
+
+				$('#h1-show-hide').animate(properties,4000);
+			});
+			//6 - module jquery ajax:
+			// ajax: la ky thuat cho phep thao tac du lieu vs server ma ko can tai lai trang
+			// nen su dung jquery de thao tac vs ajax hon la su dung js thuan.
+			// vd: gui 1 ajax len server su dung jquery: $.ajax(object_ajax)
+			var obj_ajax = {
+				//url nhan ajax
+				url: 'get_data.php',
+				// phouong thuc gui du lieu: post/get
+				method:'get',
+				// du lieu muon gui len:
+				data:{
+					name: 'khanh',
+					location: hanoi,
+				},
+				// han nhan ket qua tra ve sau khi url xu ly ajax xong, chua thong qua tham so data.
+				success: function(data){
+					console.log(data);
+				}
+			};
+			// goi ajax:
+			$.ajax(obj_ajax);
+		});
+	</script>
+	<h1 id="h1-show-hide"> The h1 se hide-show khi click nut ben kia</h1>
+	<a href="#" id="click-to-show">click to show h1</a>
+	<button id="click-to-toggle">click to show/hide</button>
+	<a href="#" id="click-to-hide"> click to hide h1</a>
+	<button id="click-to-animate">Click de xem hieu ung chuyen dong</button>
+</body>
+</html>

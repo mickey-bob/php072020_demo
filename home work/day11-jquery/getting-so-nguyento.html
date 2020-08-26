@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lay so nguyen to</title>
+</head>
+<body>
+	<!-- dung 2 vong lap for de check so nguyen to -->
+	
+	<script type="text/javascript">
+		// neu number < 2 thi ko phair so nguyen to
+		function isPrime(number){
+			if (number < 2) {
+				return false;
+			}
+			//mac dinh number la so nguyen to, la 1 cowf de xac dinh so nguye nto hay ko
+			var is_prime = true;
+			//xu ly kiem tra so ngueyn to de set bien is_prime =false.
+			for (var i =2; i <= Math.sqrt(number); i++){
+				// neu tai tung thio diem lap, phat hien var number chia het cho bien lap, thi gan cowf = false, thoat vong lap
+				if (number % i ==0) {
+					is_prime = false;
+					break;
+				}
+			}
+			return is_prime;
+		};
+		$('#form-4').submit(function(){
+			var number = $('#number').val();
+			var result = 'cac so nguyen to tu 1 den' + number + 'la:';
+			// lay cac so nguey nto
+			for (var i = 1; i <= number; i ++){
+				if (isPrime(i) == true){
+					result += i + ',';
+				}
+			}
+			// hien thi ra man hinh:$
+			$('#result').html(result);
+			// ngan submit form
+			event.preventDefault();
+		});
+	</script>
+</body>
+</html>

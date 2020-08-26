@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>so nguyen to</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- <script type="text/javascript" src="js/nguyento-bai4.js"></script> -->
+</head>
+<body>
+	<h3>So nguyen to</h3>
+	<form id="submit-form">
+		Nhap so a: <input type="text" name="" value="" id="id-input">
+		<br>
+		<button type="submit" value="" id="submit-button">Show so nguyen to</button>
+		<h4 id="result"></h4>
+	</form>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			function so_nguyen (number){
+				var check_number = true;
+				if (number < 2) {
+					check_number = false;
+				}
+				for (i = 2; i <= Math.sqrt(number); i++){
+					if (number % i == 0) {
+						check_number = false;
+					break;
+					}
+				}
+				return check_number;
+			};
+			$('#submit-form').submit(function(){
+				var number = $('#id-input').val();
+				// var i = '';
+				var result = 'Cac so nguyen to tu 1 den '+ number + ' la:';
+				// console.log(so_nguyen(number))
+				// var x = 1;
+				for (i = 1; i <= number; i++){
+					// console.log(i);
+					var j = so_nguyen(i);
+					if (j == true) {
+						console.log('inside if');
+						// result += i + ',';
+						// x += 1;
+						// console.log(x);
+						}
+					
+					};
+				$('#result').html(result);
+				event.preventDefault();
+				});
+	
+	});
+	</script>
+</body>
+</html>

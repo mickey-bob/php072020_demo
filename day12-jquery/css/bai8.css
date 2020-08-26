@@ -1,0 +1,38 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+div#menu {
+    background: red;
+    width: 80%;
+    margin: auto;
+}
+#menu li {
+    list-style-type: none;
+    display: inline-block;
+    width: 130px;
+    height: 33px;
+    position: relative;
+}
+ul {
+    text-align: center;
+}
+a {
+    display: block;
+    font-size: 22px;
+    height: 100%;
+    text-decoration: none;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+ul.sub-menu {
+    position: absolute;
+    display: none;
+}
+/*#menu li:hover .sub-menu {
+	display: block;
+	background: pink;
+
+}*/

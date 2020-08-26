@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ung dung chat don gian, su dung jquery, bai 7 day 11</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="box-chat">
+			<div class="box-name">
+				Ung dung chat
+			</div>
+			<div class="box-content">
+				<!-- message content -->
+				<div class="message">
+					<div class="message-content">
+						Chao ban
+					</div>
+					<div class="message-time">
+						25/08/2020 18:05
+					</div>
+				</div>
+				<hr>
+					<div class="message">
+					<div class="message-content">
+						dong the div, message thu 2
+					</div>
+					<div class="message-time">
+						25/08/2020 18:06
+					</div>
+				</div>
+				<!-- end message content -->
+			</div>
+			<form action="" method="post">
+				<input type="text" name="" id="message" value="">
+				<br>
+				<input type="submit" name="Send">
+			</form>
+		</div>
+	</div>
+	<h3 id="error" style="color:red"></h3>
+	<script type="text/javascript">
+		function getCurrentDateTime() {
+			// Ham js lay ra thoi gian hie ntai cua he thong. 
+	    var currentdate = new Date();
+	    var datetime = currentdate.getDate() + "/"
+        + (currentdate.getMonth()+1)  + "/"
+        + currentdate.getFullYear() + " "
+        + currentdate.getHours() + ":"
+        + currentdate.getMinutes();
+    // + currentdate.getSeconds();
+
+    	return datetime;
+		}
+
+		// s;u dung jquery
+		$(document).ready(function(){
+			// alert('abc');
+			// vi trong form dang chi co 1 the form duy nhat nen co the lay selector theo the from
+			$('form').submit(function(){
+				// alert('a d c d dd');
+				// lay gia tri cua input message
+				var message = $('#message').val();
+				// alert(message);
+				// neu messange ko co gi thi bao loi
+				var error = '';
+				var result = '';
+				if(message == ''){
+					error = 'message ko dc de trong'
+					// focus con tro chuot vao input hien tai
+					$('#message').focus();
+				}
+				// su ly noi message vao box chat, chi khi nao ko co loi xay ra
+				if(error ==''){
+					// copy khoi html tinh cua message tuong ung, doi du lieu dong bao gom: message gu len vs thio gian gui.
+					// luu y viet code HTML trong js phai vieet cac the HTML ko dc chua dau cach
+					var datetime = getCurrentDateTime();
+					result = '<div class="message"><div class="message-content">'+ message +'</div><div class="message-time">'+ datetime +'</div><hr>';
+					// alert(result);
+					// gan noi dung tren vao trong khoi co class = box-content, su dung ham appedn cua jquery
+					$('.box-content').append(result);
+				}
+				// hien thi error ra man hinh:
+				$('#error').html(error);
+				// ngan hanh vi tai lai trang cua form khi submit
+				event.preventDefault();
+			});
+		});
+	</script>
+</body>
+</html>
