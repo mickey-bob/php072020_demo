@@ -1,0 +1,43 @@
+<!-- jquery UI: thu vien ve giao dien nguoi dung, dc viet dua tren thu vien jquery -->
+<!-- 
++ free
++ la 1 thu vien mien phi, cung cap cac wiget de tien cho user.
++ jqueryui.com  -- UI: user interface
++ cai dat thu vien: tai thu vien ve, nhung file sau:
+-- jquery-ui.min.css
+-- jquery-ui.min.js
+
+
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>demo jquery UI</title>
+ 	<!-- tich hop css cua thu vien jqueryui -->
+ 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+ </head>
+ <body>
+ 	<h1>Demo component datepicker cua jqueryUI</h1>
+ 	<p>Date: <input type="text" id="datepicker"></p>
+ 	<!-- demo input chon ngay o dang mac dinh cua HTML -->
+ 	<input type="date" name="">
+ 	<!-- tich hop jquery vs file js cua jquery ui -->
+ 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+ 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+ 	<script>
+ 		//$(function()) tuong duong vs $(document).ready.
+ 	 $( function() {
+    	$( "#datepicker" ).datepicker();
+ 	} );
+  </script>
+  <h2>demo dialog</h2>
+  <div id="dialog" title="Basic dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+	</div>
+<script>
+  $( function() {
+    $( "#dialog" ).dialog();
+  } );
+  </script>
+ </body>
+ </html>

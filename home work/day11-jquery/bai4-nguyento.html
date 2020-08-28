@@ -32,17 +32,19 @@
 				var number = $('#id-input').val();
 				console.log(number);
 				var result = 'Cac so nguyen to tu 1 den '+ number + ' la:';
-				// console.log(so_nguyen(number))
+				// console.log(so_nguyen(133))
 				// var x = 1;
 				// var i = '';
-				for (j = 1; j <= number; j++){
-					// var j = so_nguyen(i);
+				for (i = 1; i <= number; i++){
+					// neu ko dung var i =1, thi phai ddoior ten bien cho khac vs bien i trong cau dk if dong 43 -- ko doi ten bien se bi lap vo han
+					// var j = so_nguyen(i);   //3-42 2-44        
 						// x += 1;
-					// console.log(x);
-					if (so_nguyen(j) == true) {
-						// console.log(x);
+					console.log(i);
+					if (so_nguyen(i) == true) {
+						console.log(i);
+						console.log(so_nguyen(i));
 						// console.log('inside if');
-						result += j + ',';
+						result += i + ',';
 						}
 					
 					}

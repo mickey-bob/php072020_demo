@@ -1,0 +1,73 @@
+<!-- demojquery-validate -->
+<!-- 
++ thu vien free, validate from theo kieu realtime
++ ve ban chat su dung su kien keyup de xu ly, dc viet dua tren jquery.
++ cai dat: tai thu vien ve -> jqueryvalidation.org
++ nhung file jquery.validate.min.js
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>demo jquery validate</title>
+ </head>
+ <body>
+
+ <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+ <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<form action="" method="" id="form">
+	nhap ten: <input type="text" name="name">
+	<br>
+	nhap tuoi: <input type="text" name="age">
+	<br>
+	<input type="submit" name="" value="check validate">
+	
+</form>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// thu vien jqeury validate se validate input dua vao thuoc tinh name -- ko phair id or class.
+		// thu vien nay su dung 2 thuoc tinh sau de validate form:
+		// -- rules: quy tac de validate: vd: required - ko dc de trong
+		// - messeage: tuy bien message validate theo y mik
+		// + thu vien chi dc ap dung trong the <form>
+		// + khoi tao 1 doi tuong de su dung:
+		var obj_validate = {
+			rules: {
+				// set cho input co thuoc tinh name = name
+				name:{
+					// liet ke cac rule
+					required: true,
+					minlength: 3
+
+				},
+				age: {
+					number: true,
+					min: 2
+				},
+
+			},
+			// khai bao message valiate do mik customize
+			messages: {
+				name: {
+					required: 'phai nhap ten',
+					minlength: 'phai nhap it nhat 3 ky thu',
+				},
+				age:{
+					number: 'phai nhap so',
+					min: 'phai nhap so >= 2',
+				},
+			},
+			// khai bao phuong thuc de thay doi vi tri hien thi cua message validate.
+			errorPlacement: function(error, element){
+				// hien thi vi tri message (error) phia duoi/sau emement
+				error.insertAfter(element);
+				// bao error boi the <div> voi stype la mau do:
+				error.wrap('<div style=" color:red">');
+			}
+		};
+		// ap dung jquery validate cho form co id=from
+		$('#form').validate(obj_validate);
+	});
+</script>
+
+ </body>
+ </html>

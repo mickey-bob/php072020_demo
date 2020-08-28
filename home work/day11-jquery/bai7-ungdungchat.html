@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ung dung chat don gian</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<div id="box-container">
+		<div id="box-header">Ung dung chat don gian</div>
+		<hr>
+		<div id="box-content">
+			<div class="message">
+				<div class="message-content">Day la xong message-content test</div>
+				<div class="message-time">27/08/2020 28:08</div>	
+			</div>
+			<hr>
+			<div class="message">
+				<div class="message-content">Day la xong message-content test thu 2</div>
+				<div class="message-time">27/08/2020 29:08</div>
+				
+			</div>
+			<hr>
+		</div>
+		<form id="id-form-submit">
+			<input type="text" name="" id="id-input-text">
+			<input type="submit" name="" value="Click to gui" >
+		</form>
+		<h3 id="error"></h3>
+	</div>
+	<script type="text/javascript">
+		function getCurrentDateTime() {
+		    var currentdate = new Date();
+		    var datetime = currentdate.getDate() + "/"
+		        + (currentdate.getMonth()+1)  + "/"
+		        + currentdate.getFullYear() + " "
+		        + currentdate.getHours() + ":"
+		        + currentdate.getMinutes();
+		    // + currentdate.getSeconds();
+			 return datetime;
+		}
+
+		$(document).ready(function(){
+			$('#id-form-submit').submit(function(){
+				var obj_message = $('#id-input-text').val();
+				var obj_time = getCurrentDateTime();
+				var error = '';
+				var obj_result = '<div class="message"><div class="message-content">' + obj_message + '</div><div class="message-time">'+ obj_time +'</div></div><hr>';
+				if(obj_message == ''){
+					// alert('message empty');
+					error = 'Moi ban nhap tin nhan :D';
+					$('#error').html(error);
+				}
+				if(error == ''){
+					$('#box-content').append(obj_result);
+					$('#error').html(error);
+				}
+				event.preventDefault();
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!--
++ demo slidershow su dung 1 thu vien của js tu ben ngoai - ben thu 3, dua tren thu vien jquery.
++ search google: jquery slider pro:
++ tai thu vien nay ve 
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>demo slider pro master</title>
+ 	<!-- nhung file css sau: slider-pro.min.css -->
+ 	<link rel="stylesheet" type="text/css" href="slider-pro-master/dist/css/slider-pro.min.css">
+ 	<!-- <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> -->
+ 	<!-- <script type="text/javascript" src="slider-pro-master/libs/jquery-1.11.0.min.js"></script> -->
+ 	<script type="text/javascript" src="slider-pro-master/libs/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="slider-pro-master/dist/js/jquery.sliderPro.min.js"></script>
+ </head>
+ <body>
+ 	<!-- + nhung file js sau : jquery.sliderPro.min.js
+ 	  -->
+ 	  <!-- nhung thu vien jquery -->
+ 	<!--   <script type="text/javascript" src="slider-pro-master/js/jquery-1.11.0.min.js"></script>
+ 	 <script type="text/javascript" src="slider-pro-master/js/jquery.sliderPro.min.js"></script> -->
+ 	<!-- copy ma html ma thu vien yeu cau -->
+ 	<!-- co the xem -->
+
+
+ 	
+ 	<!-- </script> -->
+ 	<div class="slider-pro" id="my-slider">
+		<div class="sp-slides">
+			<!-- Slide 1 -->
+			<div class="sp-slide">
+				<img class="sp-image" src="images/hang1.jpg"/>
+				<div id="test"><a href="#">The a</a></div>
+			</div>
+			
+			<!-- Slide 2 -->
+			<div class="sp-slide">
+				<img class="sp-image" src="images/hang3.jpg">
+				<p class="sp-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+			
+			<!-- Slide 3 -->
+			<div class="sp-slide">
+				<!--
+				<h3 class="sp-layer">Lorem ipsum dolor sit amet</h3>
+				<p class="sp-layer">consectetur adipisicing elit</p>
+				-->			
+ 				<img class="sp-image" src="images/hang2.jpg">
+ 				<!-- <img class="sp-slide" src="images/hang3.jpg"> -->
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function( $ ) {
+			$( '#my-slider' ).sliderPro();
+		});
+	</script>
+	<!-- <script type="text/javascript">
+		$(document).ready(function(){
+			alert('emmbled suscessed');
+		});
+	</script> -->
+ 	
+ </body>
+ </html>
