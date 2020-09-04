@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Green Travel Viet</title>
+	<link rel="stylesheet" type="text/css" href="css/travel.css">
+
+</head>
+<body>
+	<!-- main container -->
+	<div class="container">
+		<!-- main content -->
+		<div class="content">
+			<!-- content header -->
+			<div class="content-header">
+				<h2>Green Travel Viet</h2>
+			</div>
+			<!-- end content header -->
+			<!-- content menu -->
+			<div class="content-menu">
+				<ul id="id-content-menu">
+					<li class="li-menu">
+						<a href="#">Home</a>
+					</li>
+					<li class="li-menu">
+						<a href="#">Green Tour</a>
+					</li>
+					<li class="li-menu">
+						<a href="#">Hotel</a>
+					</li>
+					<li class="li-menu">
+						<a href="#">About us</a>
+					</li>
+					<li class="li-menu">
+						<a href="contact.html">Contact us</a>
+					</li>
+				</ul>
+			</div>
+			<!-- end content menu -->
+			<!-- main-content -->
+			<h2>Contact Us</h2>
+			<div id="div-form">
+				<form id="form">
+					Your name: <input type="text" name="" id="name">
+					<br>
+					Your address: <input type="text" name="" id="address">
+					<br>
+					Tel: <input type="text" name="" id="tel">
+					<br>
+					Email: <input type="text" name="" id="email">
+					<br>
+					Content: <textarea id="textarea" rows="10" cols="10"></textarea>
+					<br>
+					<button id="send" value="send">Send</button>
+					<button id="reset" value="send">Reset</button>
+				</form>
+			<!-- end main-content -->
+			</div>
+		</div>
+		<!-- end main content -->
+		<h2 id="error"></h2>
+	</div>
+	<!-- end main container -->
+	<!-- java -->
+	<script type="text/javascript">
+		var obj_form = document.getElementById('send');
+		obj_form.addEventListener('click',function(){
+			var error = '';
+			var obj_name = document.getElementById('name');
+			var name = obj_name.value;
+			var obj_address = document.getElementById('address');
+			var address = obj_address.value;
+			var obj_tel = document.getElementById('tel');
+			var tel = obj_tel.value;
+			var obj_email = document.getElementById('email');
+			var email = obj_email.value;
+			var obj_content = document.getElementById('textarea');
+			var content = obj_content.value;
+			if (name == '') {
+				error = 'Ban phai nhap ten';
+				obj_name.focus();
+			} else if (address == '') {
+				error = 'Ban phai nhap address';
+				obj_address.focus();
+			} else if (email == ''){
+				error = 'Ban phai nhap email';
+				obj_email.focus();
+			} else if (content ==''){
+				error = 'Ban phai nhap comment';
+				obj_content.focus();
+			} else if (tel == ''){
+				error = 'Ban phai nhap so dien thoai'
+				obj_tel.focus();
+			}
+
+			if (error == '') {
+				alert('Ban submit thanh cong');
+			}
+			event.preventDefault();
+ 			document.getElementById('error').innerHTML = error;
+		});
+	</script>
+</body>
+</html>

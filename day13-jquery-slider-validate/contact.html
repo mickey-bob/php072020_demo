@@ -46,6 +46,7 @@ on tap t5 3/9/2020
  				<br>
  				<input type="submit" name="" value="Send info">
  			</form>
+ 			<h3 id="error" style="color: red"></h3>
  		</div>
  		<div class="footer">
  			footer
@@ -62,6 +63,49 @@ on tap t5 3/9/2020
  		// + hien thi loi validate ma ko tai lai trang
  		// + khi co loi, tro con tro chuot vao input dang loi
  		// + sau khi validate thanh cong, tao 1 thong bao noi dung: lie nhe thanh cong.
+ 		// chua bai demo contact:
+ 		var obj_form = document.getElementById('form');
+ 		obj_form.addEventListener('submit',function(){
+ 			// alert('submit succeed');
+ 			// + tao cac bien chua t.tin loi vs ket qua;
+ 			var error = '';
+ 			var result = '';
+ 			// lay cac doi tuong input vs gia tri theo id
+ 			var obj_name = document.getElementById('name');
+ 			var name = obj_name.value;
+ 			var obj_age = document.getElementById('age');
+ 			var age = obj_age.value;
+ 			var obj_email = document.getElementById('email');
+ 			var email = obj_email.value;
+ 			// validate from theo yeu cau
+ 			//tung truong hop ko dc de trong
+ 			// khai bao chuoi regex kt dinh dang email: 
+ 			var pattern_email = /^[0-9a-zA-Z_-]{2,}@[0-9a-zA-Z_-]{2,}\.{0,}[0-9a-zA-Z]{2,}$/;
+ 			if (name == '') {
+ 				error = 'Phai nhap name';
+ 				// focus con tro chuot vao input loi
+ 				obj_name.focus();
+ 			} else if (age ==''){
+ 				error = 'Tuoi phai nhap';
+ 				obj_age.focus();
+ 			} else if (email ==''){
+ 				error = 'Email phai nhap';
+ 				obj_email.focus();
+ 			} else if (isNaN(age)) {
+ 				error = 'Tuoi phai nhap so';
+ 				obj_age.focus();
+ 			} else if (!pattern_email.test(email)){
+ 				error = 'Email chua dung nhe';
+ 				obj_email.focus();
+ 			}
+ 			// neu ko co loi xay ra thi hien thi popup canh bao: lien he thanh cong:
+ 			if (error == '') {
+ 				alert('Lien he thanh cong');
+ 			}
+ 			// + hien thi error ra ngoai man hinh theo co che ko tai lai trng, ngan ngua hanh vi tai lai trong khi submit form
+ 			event.preventDefault();
+ 			document.getElementById('error').innerHTML = error;
+ 		});
  	</script>
  </body>
  </html>

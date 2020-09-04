@@ -1,0 +1,24 @@
+div#container {
+    border: solid 10px;
+}
+div#sub-container {
+    border: solid 10px red;
+    height: 100%;
+    font-size: 100px;
+    font-weight: bold;
+}
+/* - Note: container ko set height --> height se thay doi tuy theo sub-container,
+sub-container de height 100% cung ko co gi khac, neu set fix height thi height cua
+container cung thay doi*/
+
+#col {
+    background: blue;
+    width: 99px;
+    margin: 10px;
+}
+#test-flex {
+    display: flex;
+}
+/*flex uu tien dung de layout trang web.
+se lam cac phan tu con(truc tiep) gop lai 1 hang.
+*/

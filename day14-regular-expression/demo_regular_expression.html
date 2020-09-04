@@ -1,0 +1,132 @@
+<!-- demo regular expression -->
+<!-- 
+1 - khái niệm
++ bieu thuc chinh quy: 
++ thuong dc dung de kiem tra 1 chuoi ky tu nao do -- có khớp mẫu cho trc hay ko
++ vd: kiểm tra chuỗi email đúng định dạng ko, pass đáp ứng yêu cầu ko
++ học b.thuc chính quy: tạo mẫu -- pattern rồi kt đầu vào vs mẫu đó.
+
+2- ví dụ:
++ kt xem chuỗi ký tự bất kỳ có kết thúc bằng chuỗi ký tự 'com' hay ko
+hợp lệ: abc.com, 123com
+ko hợp lệ: com123, 123com1
+ -->
+ <script type="text/javascript">
+ 	// khai báo 1 pattern:
+ 	var pattern = /com$/;
+ 	//test vs 1 số chuỗi
+ 	var check_khanhnt = pattern.test('abc.com1');
+ 	console.log(check_khanhnt);
+ </script>
+ <!-- 3- ham kt bieu thuc chinh quy: -->
+ <!-- 
++ kt xem chuoi co khop vs battern quy dinh ban dau ko
+  -->
+  <script type="text/javascript">
+  	var pattern = /^com$/;
+  	var check = pattern.test('abdc12345');
+  	// /^com$/: bat dau vs ket thuoc thuoi la 'com'. tuong duong so sanh tuyet doi.
+  	// return: boolen.
+  	// + su dung ham execl(): tim kiem trong chuoi ban dau, meu hop thi se mang lai ket qua: chuoi dau vao hop le.
+  	var pattern =/bac0/
+  	var result = pattern.exec('abc bac 123456');
+  	
+  	// +4 mot so dieu kein co san cua regex
+  	// + partten chua ky tu la so: \d --> tuong duong mien pham vi: [0-9]
+  	var partten = /\d/;
+  	var check = partten.test('bac');
+  	console.log(check);  //false
+  	// + partern ko chua ky nao la so: \D
+  	// tuong duong mien pham vi ko co so: [^0-9]
+  	var pattern = /\D/;
+  	var pattern = /^0-9/;
+  	var check = pattern.test('abcdefghik');  //true
+  	// abc    80 --> false
+  	// + pattern: chua ky tu la so or text: \w
+  	// tuong duong mien pham vi: [a-zA-Z0-9]
+  	var pattern = /\w/;
+  	//abc123 --> true
+  	// +- --> false
+  	// + pattern nguoc lai voi \w --> \W
+  	// tuong duong mien pham vi: [^a-zA-Z0-9]
+  	// + pattern: chua ky tu lien quan khoangr trong: dau cach, tab, ky tu xuong dong \n: \s
+  	var pattern = /\s/;
+  	var check = pattern.test('123abc');  //false
+  	// 123 nvvgf: true;
+  	var string = ''; //false
+  	// + nguoc lai vs pattern \s: \S
+  	// 5- cac dieu kien hay su dung regex:
+  	// + phai xuat hien o dau chuoi: ^
+  	// tao 1 pattern bat buoc phai chua chuoi khanhnt o ddaauf:
+  	var pattern = /^khanhnt/;
+  	//ntkhanh --> false;
+  	//khanhnt is pro --> true
+  	// + phai xuat hien o cuoi chuoi: $
+  	// vd: buoc phai co khanhnt o cuoi
+  	var pattern = /khanhnt$/;
+  	// +phai dung bang - so sanh tuyet doi(so sanh bang)
+  	//vd: pattern: chua chuoi dung bang khanhnt
+  	// ket hop ^ vs $
+  	var pattern = /^khanhnt$/;
+  	// + chua 1 ky tu bat ky or ko chua ky tu nao: .*
+  	// vd: tao pattern: bat dau khanhnt, ket thuc = abc, giua la gi cung dc
+  	var pattern = /^khanhnt.*abc$/;
+  	//khanhnt fdf 129 abc : true
+  	//+ phai nam trong khoang ky tu nao do: []
+  	// vd: [a-z]:  ky tu a,b,c ...., x , y ,z
+  	// [a-d] , [0-9]
+  	var pattern = /[0-3]/;
+  	// abcdef: false
+  	// 4fgf9: flase;
+  	//1fldl9: true;
+  	// +dao nguoc ket qua: [^]
+  	// [^0-9]: ko chua ky tu nao tu 0-9
+  	// [^0-3a-d]: ko chua 0 ->3, a ->d;
+  	//2xflgf : false;
+  	//456 xys : true;
+  	// + dieu kien or: |
+  	// vd:tao pattern cho phep chua 'khanhnt' or 'abc'
+  	var pattern = /khanhnt|abc/;
+  	//+ xuat hien bao nhieu lan: {}
+  	//vd: kt chuoi co xuat hien ky tu so tu 3-6 lan hay ko
+  	var pattern = /[0-9]{3,6}/;
+  	//abdfef: false
+  	// abc12 :false
+  	//12 abc de 12 : true;
+  	//123 abc 456789887 : false;
+  	// kt chuoio co ky tu so, xuat hien it nhat 2 lan tro len:
+  	var pattern = /[0-9]{2,}/;
+  	// bac1: false
+  	// bac123543: true
+  	// + dieu kien ko bat buoc: ?
+  	// vd: patten: chua or ko chua ky tu so:
+  	var pattern = /[0-9]?/;
+  	// + dieu kien hien thi cac ky tu dac biet: \
+  	// vd: kt string co ket thuc la .com hay ko
+  	var pattern = /\.com$/;
+  	var check = pattern.test('abcdcom');
+  	console.log(check);
+  	// cac ky tu dac biet regex da su dung: {} [] / \ + * . | ?
+  	// + Nhom dieu kien: ()
+  	// vd: kt 1 chuoi co chua cac chuoi gom 2 ky tu so lien nhau ma xuat hien it nhat 1 lan tro len hay ko.
+  	var pattern = /([0-9]{2}){1,}/;    //{2}: tuc la co dung 2 ky tu
+  	//abc 1 fdfd iu 2: false
+  	//3445: true
+  	// 343: true.
+// 6- tu tim hieu khai niem nang cao sau:
+// + lookahead: ?=
+// + phu dinh cua lookahead: ?!
+// + lookbehind: (?<=.....)
+// + phu dinh cua lookbehinhd: (?<1.....)
+// 7- 1 so vi du trong slide
+// + kt chuoi co chua khanhnt hay ko
+var pattern = /khanhnt/;
+// + kt chuoi co chua it nhat 1 ky tu m tro len:
+var pattern = /m{1,}/;
+// + kt co chua ky tu so hay ko
+var pattern = /[0-9]/;
+//+ kt dung email ko: email buoc pahi co @, truoc vs sau @ la ky tu bat ky co do dai 2 ky tu tro len:
+var pattern = /^[0-9a-zA-Z_-]{2,}@[0-9a-zA-Z_-]{2,}\.{0,}[0-9a-zA-Z]{2,}$/;
+var check = pattern.test('abc@gmail.com');
+console.log(check);
+  </script>
