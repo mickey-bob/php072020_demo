@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5639ccdd-a8ec-4b32-823b-38d782630ad5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Day16_PHP_Operator_Condition_Loop/demo-php2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day16_PHP_Operator_Condition_Loop/file-test.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14-regular-expression/GIOI THIEU PHP.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14-regular-expression/demo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14-regular-expression/demo_php1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/array-demo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_function.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day18_PHP_Form/FORM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day18_PHP_Form/demo_form_php.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day18_PHP_Form/form_radiio_checkbox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day18_PHP_Form/get_post_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day01_Software_Setup_And_Git_And_HTML.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day16_PHP_Operator_Condition_Loop.rar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,44 +51,59 @@
     <session id="-1225290677">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="php" value="5" />
+          <entry key="php" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="5" />
+          <entry key="PHP" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="11228" />
+          <entry key="php" value="24479" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="11227" />
+          <entry key="PHP" value="24478" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Day16_PHP_Operator_Condition_Loop/demo-php2.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/FORM.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="219" column="4" selection-start-line="219" selection-start-column="4" selection-end-line="219" selection-end-column="4" />
+            <state relative-caret-position="1144">
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+              <folding>
+                <element signature="e#740#769#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/form_radiio_checkbox.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -109,6 +128,12 @@
         <option value="$PROJECT_DIR$/day14-regular-expression/demo_php1.php" />
         <option value="$PROJECT_DIR$/Day16_PHP_Operator_Condition_Loop/file-test.php" />
         <option value="$PROJECT_DIR$/Day16_PHP_Operator_Condition_Loop/demo-php2.php" />
+        <option value="$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_function.php" />
+        <option value="$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/array-demo.php" />
+        <option value="$PROJECT_DIR$/Day18_PHP_Form/get_post_form.php" />
+        <option value="$PROJECT_DIR$/Day18_PHP_Form/demo_form_php.php" />
+        <option value="$PROJECT_DIR$/Day18_PHP_Form/FORM.php" />
+        <option value="$PROJECT_DIR$/Day18_PHP_Form/form_radiio_checkbox.php" />
       </list>
     </option>
   </component>
@@ -137,7 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,24 +177,25 @@
             <path>
               <item name="php072020_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="php072020_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="day14-regular-expression" type="462c0819:PsiDirectoryNode" />
+              <item name="Day17_PHP_Array_Function_Array_Time" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="php072020_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="php072020_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="Day16_PHP_Operator_Condition_Loop" type="462c0819:PsiDirectoryNode" />
+              <item name="Day18_PHP_Form" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -199,17 +224,23 @@
       <workItem from="1599568792185" duration="74000" />
       <workItem from="1599568926063" duration="5998000" />
       <workItem from="1599740522860" duration="7592000" />
+      <workItem from="1600169860730" duration="528000" />
+      <workItem from="1600170418969" duration="74000" />
+      <workItem from="1600170547811" duration="7693000" />
+      <workItem from="1600312801953" duration="6766000" />
+      <workItem from="1600342094430" duration="10292000" />
+      <workItem from="1600396948101" duration="2194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16101000" />
+    <option name="totallyTimeSpent" value="43648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="688" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13141525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19751166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -270,8 +301,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Day16_PHP_Operator_Condition_Loop/demo-php2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="219" column="4" selection-start-line="219" selection-start-column="4" selection-end-line="219" selection-end-column="4" />
+        <state relative-caret-position="376">
+          <caret line="166" column="13" selection-start-line="166" selection-start-column="13" selection-end-line="166" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/array-demo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="133" column="25" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/get_post_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/demo_form_php.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="54" column="2" lean-forward="true" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day17_PHP_Array_Function_Array_Time/Code_demo_tren_lop/demo_function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/FORM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <element signature="e#740#769#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Day18_PHP_Form/form_radiio_checkbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
