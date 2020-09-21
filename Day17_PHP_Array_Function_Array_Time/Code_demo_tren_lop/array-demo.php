@@ -15,7 +15,7 @@
 // + dung tu khoa array. --> dung cho phien ban php < 5.4
 $arr1 = array('khanhnt', 10, 19.5,true, array());
 // + dung []
-$arr2 = ['khanhnt', 10, 19.5, true, []];
+$arr2 = ['khanhnt', 10, 19.5, truE, []];
 // + uu tien dung [] de khai bao mang.
 // Doc thong tin array tren:
 // + mang nay co 5 phan tu:
@@ -25,8 +25,8 @@ $arr2 = ['khanhnt', 10, 19.5, true, []];
 // - Xem t.tin array (debug).
 var_dump($arr2);
 // - xem t.tin array su dung var_dump kho nhin voi cac mang co nhieu chieu
-// tu la array nam torng array.
-// Nm dung cau truc de bebug array/doi-tuong
+// nhu la array nam torng array.
+// Nen dung cau truc ben duoi de bebug array/doi-tuong
 
 echo("<pre>");
 print_r($arr2);
@@ -40,9 +40,9 @@ $arr1 = array('khanhnt', 10, 19.5,true, array());
 // --> echo 1 array se bao loi.
 // vong lap foreach.
 //+ de hien thi dc gia tri cua mang, se can su dung vong lap.
-//+ demo sd vong lap for de chiem gia tri cua phan tu nay tu array.
+//+ demo sd vong lap for de lay gia tri cua phan tu (element) nay tu array.
  $arr = [1,2,3];
- // + lay tong so phan tu dang co trong mang, = hame count cua php.
+ // + lay tong so phan tu dang co trong mang, = ham count cua php.
 $count = count($arr);   //3
 for ($key = 0; $key < 3; $key++){
     // luon phai nho: lay gia tri cua 1 phan tu mang luon phai biet key tuong ung cua

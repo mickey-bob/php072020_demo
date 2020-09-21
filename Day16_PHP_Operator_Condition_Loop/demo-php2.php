@@ -5,8 +5,9 @@ function showInfo($name){
     $result = "xin chao: $name";
     return $result;
 }
-$show_info = showInfo(khanhnt);
+$show_info = showInfo("khanhnt");
 echo $show_info; // xin chao khanhnt
+echo "<br />";
 //+ voi cac ban moi khi viet ham vs goi ham thi thuongse truyen gia tri vao ham
 // theo kieu truyen tham tri
 // khac nhau tham tri -- tham chiếu.
@@ -14,28 +15,37 @@ echo $show_info; // xin chao khanhnt
 $number = 5;
 echo "Bien number truoc khi goi ham co gia tri $number";
 //5
+echo "<br />";
 function changeNumber($number){
     $number = 0;
     echo "bien number ben torng ham co gia tri $number";
     //0
+    echo "<br />";
 }
 changeNumber($number);
 echo "Bien number sau khi goi ham co gia tri $number";
 //5
+echo "<br />";
 // + ket qua thuc te la bien $number ban đầu vẫn =5, ko hề thay đổi giá trị.
 // truyền tham trị nghĩa là tao ra 1 bản sao của biến ban đầu, truyền
 // ban sao vào trong hàm nên bản góc vẫn sẽ thay đổi giá trị
 // ---> đó là truyền tham trị
 // vd với truyền tham chiếu:
+echo "testing       Su dung truyen tham tri vao function";
+echo "<br />";
 $number1 = 5;
 echo "bien number truoc khi goi ham co gia tri $number1";
+echo "<br />";
 // them dau & truoc bien $number1 lam chuyen tu truyenf tham tri thành tham chiếu.
 function changeNumber1 (&$number1){
     $number1 = 0;
     echo "bien number ben trong ham dang co gia tri $number1";
 }
+
 changeNumber1($number1);
+echo "<br />";
 echo "bein number sau khi goi ham co gia tri $number1";
+echo "<br />";
 // ket qua: 0 : do tryền cả biến $number1 vào -- truyền bản gốc vào.
 // kết quả biến number1 đa bị thay đổi.
 //  Nhân biết truyền tham trị or tham chiếu thông qua ký tụ & trước khai báo
@@ -56,20 +66,21 @@ echo "bein number sau khi goi ham co gia tri $number1";
 // + nhung file trong PHP:đường dân file sẽ tuân theo đường dẫn tương đối.
 // + trong lap trinh hay dùng đường dẫn tương đối.
 //+ demo ham include:
-include "file-test.php";
-include "file-test.php";
-include "file-test.php";
+//include "file-test.php";
+//include "file-test.php";
+//include "file-test.php";
 //thu nhung 1 file ko ton tai
-include "abc.php";
-echo "<h2>Noi dung nay co dc hien thi hay ko</h2>>";
+//include "abc.php";
+//echo "<h2>Noi dung nay co dc hien thi hay ko</h2>>";
 // include nhung dc nhieu lan 1 file, neu nhulng file ko ton tai thi bao loi waring,
-// nhung code phai sau van ton tai
+// nhung code phia sau van dc xu ly (thường nên để code lỗi ở đâu dừng luôn ở đó,
+// ko xử lý code phía sau ---> nen dung require one.)
 require "file-test.php";
-require "file-test.php";
-require "file-test.php";
+//require "file-test.php";
+//require "file-test.php";
 //thu nhung 1 file ko ton tai
-require "abc.php";
-echo "<h2>Noi dung nay co dc hien thi hay ko</h2>>";
+//require "abc.php";
+//echo "<h2>Noi dung nay co dc hien thi hay ko</h2>>";
 // + require nhung dc nhieu lan cung 1 ifle, neu nhung file ko ton tai thi bao oi error a ko chay dc code phai sau
 // + include_once: chi nhung dc cung 1 file 1 lan, dong code nao loi thi code sau van chay dc.
 // + require_once: chi nhung dc 1 file 1 lan, nhung file ko ton tai code phai sau ko chay dc, bao error
@@ -89,12 +100,12 @@ echo $number1 - $number2;// -2
 // ket qua tra ve cua bieu thuc su dung so sanh luon la booolean (true/false)
 $number2 = 5;
 $number1 = 2;
-var_dunm( $number1 == $number2); //false
-var_dunm( $number1 > $number2); //true
-var_dunm( $number1 >= $number2); //true
-var_dunm( $number1 <= $number2); // false
-var_dunm( $number1 < $number2); //false
-var_dunm( $number1 != $number2); //true // so sanh khac
+var_dump( $number1 == $number2); //false
+var_dump( $number1 > $number2); //true
+var_dump( $number1 >= $number2); //true
+var_dump( $number1 <= $number2); // false
+var_dump( $number1 < $number2); //false
+var_dump( $number1 != $number2); //true // so sanh khac
 
 
 // + Toan tu logic: && || !
@@ -136,7 +147,7 @@ if ($number > 0){
 <?php if ($number > 0): ?>
 <table border="1" cellpadding="8" cellspacing="0">
     <tr>
-        <td>hang 1 cot 1</td>
+        <td>hang 1 cot 1 write shortcut</td>
     </tr>
 
 </table>
@@ -154,7 +165,7 @@ if ($number > 0){
 <?php if ($number > 0): ?>
 <?php elseif ($number != 0): ?>
 <?php else: ?>
-<?php endif ?>
+<?php endif; ?>
 
 
 <?php
@@ -164,7 +175,7 @@ if ($number > 0){
     $day = 4;
     switch ($day){
         case 2: echo "thu 2"; break;
-        case 3: echo "thu 3": break;
+        case 3: echo "thu 3"; break;
         default: echo "ko phai thu 2, 3";
     }
 
