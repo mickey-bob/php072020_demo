@@ -14,7 +14,9 @@ echo array_sum($arr);
 $arr = [
     'name' => 'khanhnt',
     'age' => 20,
+//    'abc' => 'gia tri de element abc ton tai, ko null',
 ];
+echo "Ham check key exist";
 $check = array_key_exists('abc', $arr);
 var_dump($check); //false.
 //+ loai bo cac gia tri trung lap trong 1 array.
@@ -36,14 +38,17 @@ echo $str; //1-2-3
 // + lay gia tri cuoi cung cua 1 mang: end
 $arr = [4,5,8];
 echo end($arr); //3
+echo "Phia duoi end function";
 //+ lay  gia tri dau tien cua array: reset
 $arr = [4,5,6];
 echo reset($arr);
+echo "Phia duoi reset function";
 // + xoa phan tu array theo key: unset.
 $arr = [3,4,5,5];
-unset($arr[3]);
-var_dump($arr); //3,4,5
+unset($arr[1]);
+var_dump($arr); //3,5,5
 $arr = [3,4,5];
+echo "PHia dui unset function";
 //+ xem co phai kieu array hay ko: is_array.
 //+ lay gia tri nho nhat cua array: min
 //+ lay iga tri max: max.
@@ -53,3 +58,4 @@ $arr = [3,4,3,5,4,6,8];
 sort($arr);
 var_dump($arr); // 3,3,4,5,6,8
 ?>
+

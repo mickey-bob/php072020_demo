@@ -19,8 +19,13 @@
 // + neu input cho phep chon nhieu --> name o dang array.
 // vd:checkbox, select dang multiple,
 // vd: name=jobs[]
+echo "<pre>";
+print_r($_POST);
+print_r($_FILES);
+echo "</pre>";
 ?>
-<form action="" method ="post">
+
+<form action="" method ="post" >
     Fullanme: <input type="text" name="fullname" />
     <br />
     age: <input type = "number" name = "password" />
@@ -33,7 +38,7 @@
     <input type="radio" name="gender" value="0"/>Male
     <input type="radio" name="gender" value="1"/>Female
     upload avatar:
-<input type = "file" name="avatar" />
+<input type = "file" name="avatar"  />
     file multiple:
 <input type = "file" multiple name = "files[]" />
     <br />
