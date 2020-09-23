@@ -16,6 +16,8 @@
 $arr1 = array('khanhnt', 10, 19.5,true, array());
 // + dung []
 $arr2 = ['khanhnt', 10, 19.5, truE, []];
+$arr2['key-string'] = "adding array value by array[key]";
+$arr2[6] = "adding array value by array[number]";
 // + uu tien dung [] de khai bao mang.
 // Doc thong tin array tren:
 // + mang nay co 5 phan tu:
@@ -65,8 +67,8 @@ foreach ($arr AS $value1){
     echo "<br />";
 }
 // -- foreach day du ca key vs value: dung khi muon thao tac vs ca key vs value cua element.
-foreach ($arr AS $key => $value){
-    echo "Phan tu co key = $key dang co gia tri bang = $value";
+foreach ($arr AS $key_demo => $value_demo){
+    echo "Phan tu co key = $key_demo dang co gia tri bang = $value_demo";
     echo "<br />";
 }
 // + lay  gia tri thu cong, ko dung vong lap:
@@ -98,6 +100,7 @@ $arr = [
 echo "<pre>";
 print_r($arr);
 echo "</pre>";
+echo "phia tren la debug array";
 // Lap array de hien thi key vs value tuong ung cua tung phan tu array:
 foreach($arr AS $k_khanhnt => $value_khanh){
     echo "<br /> phan tu co key = $k_khanhnt  co gia tri la: $value_khanh";

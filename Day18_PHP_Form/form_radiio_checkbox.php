@@ -31,10 +31,10 @@ if (isset($_GET['submit'])){
     // - email phai co dinh dang email: su dung ham filter_var
 
     // - radio/checkbox buoc phai chon: isset.
-    if (!filter_var($email, FILLTER_VALIDATE_EMAIL )){
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL )){
         $error = 'email chua dung dinh dang';
 
-    } elseif (!isset($GET['gender'])){
+    } elseif (!isset($_GET['gender'])){
         $error = 'phai chon gioi tinh';
 
     } elseif (!isset($_GET['jobs'])){
@@ -58,7 +58,7 @@ if (isset($_GET['submit'])){
             if ($job ==1){
                 $job_text .= 'dev';
             } elseif (($job == 2)){
-                $job_text .= "tester";
+                $job_text .= " tester";
             }
         }
         $result .= "jobs: $job_text <br />";
@@ -87,3 +87,4 @@ if (isset($_GET['submit'])){
 
 
 </form>
+
