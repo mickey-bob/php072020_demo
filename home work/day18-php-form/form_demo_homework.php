@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: khanhnt
- * Date: 9/17/2020
- * Time: 6:48 PM
-// demo_form
- */
 
 // Form co 2 thuoc tinh co ban xu ly du lieu khi submit form
 // action: url se xu ly du lieu khi submit form, set action = "" nghia la
@@ -23,6 +16,13 @@ echo "<pre>";
 print_r($_POST);
 print_r($_FILES);
 echo "</pre>";
+$error = '';
+$result = '';
+if (isset($_POST["submit"])){
+    echo "xu ly code khi submit";
+}
+
+
 ?>
 
 <form action="" method ="post" enctype="multipart/form-data">
@@ -38,41 +38,27 @@ echo "</pre>";
     <input type="radio" name="gender" value="10"/>Male
     <input type="radio" name="gender" value="11"/>Female
     upload avatar:
-<input type = "file" name="avatar"  />
+    <input type = "file" name="avatar"  />
     file multiple:
-<input type = "file" multiple name = "files[]" />
+    <input type = "file" multiple name = "files[]" />
     <br />
-Country
-<select name = "country">
-    <option value="0"> Select 0</option>
-    <option value="1"> Select 1</option>
-    <option value="2"> Select 2</option>
+    Country
+    <select name = "country">
+        <option value="0"> VN</option>
+        <option value="1"> US</option>
+        <option value="2"> JP</option>
     </select>
-<br />
-select multiple
-<select multiple name= "file">
-    <option></option>
+    <br />
+    select multiple
+    <select multiple name= "hobit">
+        <option value="0"> football</option>
+        <option value="1"> movie</option>
+        <option value="2"> travel</option>
+        <option value="3"> music</option>
 
-</select>
-note:
-<textarea name="note"></textarea>
-<br/>
-<input type="submit" name="submit" value="CHON DE SUBMIT" />
+    </select>
+    note:
+    <textarea name="note"></textarea>
+    <br/>
+    <input type="submit" name="submit" value="CHON DE SUBMIT" />
 </form>
-
-<?php
-$arr = array(1, 2, 3, 4);
-foreach ($arr as &$value) {            // day chinh la truyen tham trij
-    $value = $value * 2;
-    echo "<pre>";
-    print_r($value);
-    echo "</pre>";
-}
-// $arr is now array(2, 4, 6, 8)
-unset($value); // break the reference with the last element
-// sau foreach ko có hàm unset kia thì var: $value vẫn giữ giá trị cuối cùng
-// mặc dù đã kết thúc foreach, và ở ngoài foreach rồi.
-echo "<pre>";
-print_r($value);
-echo "</pre>";
-?>
