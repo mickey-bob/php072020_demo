@@ -16,19 +16,39 @@ echo "<pre>";
 print_r($_POST);
 print_r($_FILES);
 echo "</pre>";
+//var_dump($_POST);
 $error = '';
 $result = '';
 if (isset($_POST["submit"])){
-    echo "xu ly code khi submit";
+//    echo "xu ly code khi submit";
+
+    $fullname = $_POST['fullname'];
+//    $test = empty($fullname);
+//    var_dump($test);
+//    echo "<pre>";
+//    print_r ($test);
+//    echo "</pre>";
+    if (empty($fullname)){
+        $error = "Ban ko nhap ten a, chan the";
+    } elseif ( strlen($fullname) >= 10 ){
+        $error = "Ten ban dai the, hon 10 character roi,";
+
+    };
+    if ($error == ""){
+        $result = "fullname nhu vay la tam on roi";
+    }
 }
 
 
 ?>
-
+<h3 style="color: blue"><?php echo $result;?></h3>
+<h3 style="color: red"><?php echo $error;?></h3>
 <form action="" method ="post" enctype="multipart/form-data">
     Fullanme: <input type="text" name="fullname" />
     <br />
-    age: <input type = "number" name = "password" />
+    Password: <input type="password" name="password" />
+    <br />
+    age: <input type = "number" name = "number" />
     <br />
     jobs:
     <input type="checkbox" name="jobs[]" value = "0" /> Dev
