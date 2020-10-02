@@ -8,7 +8,7 @@ session_start();
  */
 if (!isset($_SESSION['username'])){
     $_SESSION['error'] = 'ban chua dang nhap dau, vao day lam gi';
-    header('location: form_login.php');
+    header('location: demo_login.php');
     exit();
 }
 
@@ -26,8 +26,8 @@ if (isset($_SESSION['success'])){
 // su dung {} de hien thi gia tri cua mang ngay trong chuoi ma ko can noi chuoi.
 echo "Xin chao, <b>{$_SESSION['username']}</b>";
 echo "<br />";
-echo "Xin chao, <b>{$_SESSION['success']}</b>";
-echo "<br />";
+//echo "Xin chao, <b>{$_SESSION['success']}</b>";
+//echo "<br />";
 echo "<a href='logout.php'>logout</a>";
 
 

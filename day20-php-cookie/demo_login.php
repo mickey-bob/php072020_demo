@@ -13,16 +13,12 @@ session_start();
  * username, passwd, ghi nho dang nhap
  * /home.php: hien thi username vua dang nhap vs thoi gian + link logout.
  * */
-// + Xu ly neu user dang nhap roi thi ko cho truy cap lai form login, dua vao session name.
-if (isset($_SESSION['username'])){
-    $_SESSION['success'] = 'ban da dang nhap roi nhe, dung co ma hack';
-    header('location: home.php');
-    exit;
-}
+
 //Xu ly submit form
 //+ debug array
 echo "<pre>";
 print_r($_POST);
+print_r($_SESSION);
 echo "</pre>";
 //+ tao bien chua error vs result
 $error = '';
@@ -54,10 +50,11 @@ if (isset($_POST['login'])){
                 // demo dung ma hoa md5 de ma hoa password trc khi luu cookie
                 setcookie('password', md5($password), time() + 3600);
             }
-            echo "<pre>";
-            print_r($_POST);
-            echo "</pre>";
-            die;  /////// ham die lam cho code phai sau ko dc xu ly.
+//            echo "<pre>";
+//            print_r($_POST);
+//            echo "inside testing password";
+//            echo "</pre>";
+//            die;  /////// ham die lam cho code phai sau ko dc xu ly.
             // hien thi username tai file home.php
             // su dung session de luu lai usename sau do moi chuyen huong sang file home.php
             $_SESSION['username'] = $username;
@@ -75,14 +72,22 @@ if (isset($_POST['login'])){
 // cho phep uer dang nhap.
 if (isset($_COOKIE['username']) && isset($_COOKIE['password'])){
     // can set session username neu ko set se bi vong lap vo han
+    $_SESSION['username'] = $_COOKIE['username'];
     $_SESSION['success'] = "tu dong login thanh cong";
     header('location: home.php');
     exit();
 }
 // + xy ly hien thi sessin success neu co
+//echo "alaoalaalalaoal00000000000000000";
 if (isset($_SESSION['success'])){
     echo $_SESSION['success'];
     unset($_SESSION['success']);
+}
+// + Xu ly neu user dang nhap roi thi ko cho truy cap lai form login, dua vao session name.
+if (isset($_SESSION['username'])){
+    $_SESSION['success'] = 'ban da dang nhap roi nhe, dung co ma hack';
+    header('location: home.php');
+    exit;
 }
 ?>
 <h3 style="color: red;"><?php echo $error; ?></h3>
