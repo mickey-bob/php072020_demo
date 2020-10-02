@@ -102,7 +102,8 @@ if (isset($_POST['submit'])){
 
 ?>
 <h3 ><?php echo $error; ?></h3>
-<h3 ><?php echo $result; ?></h3>
+<h3 style="color: purple" ><?php echo $result; ?></h3>
+<h3 style="color: purple" ><?php echo "thong bao tu echo"; ?></h3>
 <form action="" method="POST" enctype="multipart/form-data">
     Fullname:
      <input type="text" name="fullname" />

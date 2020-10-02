@@ -8,7 +8,7 @@ session_start();
  */
 if (!isset($_SESSION['username'])){
     $_SESSION['error'] = 'ban chua dang nhap dau, vao day lam gi';
-    header('location: form_login.php');
+    header('location: demo_login.php');
     exit();
 }
 
@@ -17,11 +17,17 @@ if (!isset($_SESSION['username'])){
 echo "<pre>";
 print_r($_SESSION);
 echo "</pre>";
+//+ xu ly sau khi hien thi session message can xoa luon de lan sau refresh lai trang web
+// se ko hien  thi nua --> session flash.
+if (isset($_SESSION['success'])){
+    echo $_SESSION['success'];
+    unset($_SESSION['success']);
+}
 // su dung {} de hien thi gia tri cua mang ngay trong chuoi ma ko can noi chuoi.
 echo "Xin chao, <b>{$_SESSION['username']}</b>";
 echo "<br />";
-echo "Xin chao, <b>{$_SESSION['success']}</b>";
-echo "<br />"
+//echo "Xin chao, <b>{$_SESSION['success']}</b>";
+//echo "<br />";
 echo "<a href='logout.php'>logout</a>";
 
 

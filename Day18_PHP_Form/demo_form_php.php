@@ -69,9 +69,9 @@ foreach ($arr as &$value) {            // day chinh la truyen tham trij
     echo "</pre>";
 }
 // $arr is now array(2, 4, 6, 8)
-unset($value); // break the reference with the last element
+//unset($value); // break the reference with the last element
 // sau foreach ko có hàm unset kia thì var: $value vẫn giữ giá trị cuối cùng
-// mặc dù đã kết thúc foreach, và ở ngoài foreach rồi.
+// mặc dù đã kết thúc foreach, và ở ngoài foreach rồi. $value = 8;
 echo "<pre>";
 print_r($value);
 echo "</pre>";

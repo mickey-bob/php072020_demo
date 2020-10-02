@@ -60,7 +60,6 @@ if (isset($_POST['show']) == TRUE){
 </h3>
 <form action="" method="post">
     nhap ten cua ban: <br />
-    <input type="text" name="fullname" value=" <?php echo isset($_POST['fullname']) ? $_POST['fullname'] : '' ?>
-     />
-    < input type="submit" name="show" value="show thong tin" />
+    <input type="text" name="fullname" value=" <?php echo isset($_POST['fullname']) ? $_POST['fullname'] : '' ?>"/>
+    <input type="submit" name="show" value="show thong tin" />
 </form>
