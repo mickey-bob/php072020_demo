@@ -13,7 +13,9 @@ unset($_SESSION['username']);
 unset($_SESSION['success']);
 $_SESSION['success'] = 'dang xuat thanh cong';
 ////+ xoa cookie lien quan den username vs password da luu cho chuc nang ghi nho dang nhap.
-//// neu ko xoa cookie se ko log out dc, tai sao ve xem lai code.
+//// neu ko xoa cookie se ko log out dc, tai sao ve xem lai code. --> vi ko xoa cookie
+/// thi header ve file: demologin.php, se co doan code check cookie, cookie ton tai thi
+/// auto login.
 setcookie('username', 'dafafa', time() -1);
 setcookie('password', 'dafdafafa', time() -1);
 header('location: demo_login.php');

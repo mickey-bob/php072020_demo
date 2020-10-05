@@ -9,6 +9,7 @@
 session_start();
 echo "<pre>";
 print_r($_POST);
+print_r($_SESSION);
 echo "</pre>";
 // set var error vs result
 $error = '';
@@ -43,6 +44,11 @@ if (isset($_COOKIE['name_cookie']) && isset($_COOKIE['pass_cookie'])){
     $_SESSION['success'] = "Ban da auto login thanh cong";
     header("location: home.php");
     exit();
+}
+//flash session: thong bao login chi xuat hien 1 lan
+if (isset($_SESSION['success'])){
+    echo $_SESSION['success'];
+    unset($_SESSION['success']);
 }
 
 ?>
