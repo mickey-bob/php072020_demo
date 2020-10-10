@@ -6,6 +6,7 @@
  * Time: 7:37 PM
  */
 // demo_mysql
+
 // cach su dung mysql.
 // khi cai xampp, mac dinh da cai apache, php vs csdl: mysql.
 // tuong tac vs csdl thong qua viec gui cac cau truy van - cau sql.
