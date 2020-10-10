@@ -1,0 +1,9 @@
+//1:
+CREATE TABLE categories(id INT(11) AUTO_INCREMENT,name VARCHAR(255) NOT NULL,
+avatar VARCHAR(255) DEFAULT NULL,
+description TEXT DEFAULT NULL,type TINYINT(3),
+status TINYINT(3) DEFAULT NULL,created_at TIMESTAMP,
+update_at DATETIME, PRIMARY KEY (id));
+
+//
+

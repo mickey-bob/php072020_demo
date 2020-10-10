@@ -15,5 +15,6 @@ $connect = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASS,DB_NAME,DB_PORT);
 if (!$connect){
     die ('Die chet luon (khi connect failed)'. mysqli_connect_error());
 }
-echo "ket noi thanh cong nha";
+//echo "ket noi thanh cong nha";
+
 ?>
