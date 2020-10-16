@@ -136,10 +136,12 @@ $arr = [
 // nhu tren la array la mang 3 chieu.
 // voi cac mang da chieu, van dung foreach de lap array, tuy nhie
 // can chu y logic khi xu ly element cua array.
+//die();
 foreach ($arr AS $key => $value){
     echo "<br /> key = $key, value = $value";
 }
 echo "<br />";
+//die();
 // Lay gia tri theo cac thu cong tu array da chieu.
 echo $arr['info']['class']['amount']; //27
 echo "<br />";

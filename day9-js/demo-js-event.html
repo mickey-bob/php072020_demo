@@ -4,6 +4,7 @@
 	<title>demo-js-event</title>
 </head>
 <body>
+<!--<h3 id="a-html"> the h3</h3>-->
 <!-- demo-js-event -->
 <!--  HTHM1- on lai 1 so ham can ban trong js
 + hien thi noi dung ra man hinh, trong tai lieu moi, thuong dung lam demo, it dung trong thuc te
@@ -20,8 +21,8 @@ console.log(' show noi dung trng tab console, dung de debug-xem t.tin cua 1 doi 
 // var name = prompt('nhap ten cua ban');
 console.log(name);
 // + hien thi 1 popup duoi dang xac nhan, ham nay hay dung cho chuc nang xac nhan xoa
-// var is_confirm = confirm('ban chac chan muon xoa ko, chac ko');
-// console.log(is_confirm);
+var is_confirm = confirm('ban chac chan muon xoa ko, chac ko');
+console.log(is_confirm);
 
 </script>
 <a href="#" id="a-html" title="hover qua the hien thi noi dung text"> the a demo js</a>
@@ -30,7 +31,7 @@ console.log(name);
 	// de tuong tac vs html, buoc phai lay dc doi tuong html se tuong tac, de viec lay doi tuong do
 	// dc don gian thi thuong lay theo id: getElementById('ten-id');
 	var obj_a = document.getElementById('a-html');
-	console.log('obj_a');
+	console.log(obj_a);
 	// set noi dung hien thi cho doi tuong vua lay dc
 	// innerHTML/inerText
 	// innerHTML: hien thi noi dung dang HTML cho doi tuong
@@ -45,6 +46,7 @@ console.log(name);
 	console.log(a_title_value);
 	// + lấy giá trị của thuộc tính id
 	var a_id_value = obj_a.id;
+	console.log(a_id_value);
 	// Set giá trị mới cho thuộc tính title của thẻ a trên
 	obj_a.title = 'New title, day la title da dc js de thay doi title cua html -> title cua js';
 	// + ham chuyen huong

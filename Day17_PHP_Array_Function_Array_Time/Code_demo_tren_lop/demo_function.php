@@ -23,6 +23,7 @@ var_dump($check); //false.
 // array_unique
 $arr = [1,2,3,4,1,2,4];
 $arr = array_unique($arr);
+//die();
 var_dump($arr);
 // + dem so pha ntu array: count()
 $arr = [2,4,5,6];
@@ -37,11 +38,13 @@ $str = implode('-', $arr);
 echo $str; //1-2-3
 // + lay gia tri cuoi cung cua 1 mang: end
 $arr = [4,5,8];
-echo end($arr); //3
+echo end($arr); //8
+//die();
 echo "Phia duoi end function";
 //+ lay  gia tri dau tien cua array: reset
 $arr = [4,5,6];
-echo reset($arr);
+echo reset($arr); //4
+//die();
 echo "Phia duoi reset function";
 // + xoa phan tu array theo key: unset.
 $arr = [3,4,5,5];

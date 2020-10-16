@@ -56,6 +56,7 @@ if (isset($_POST['submit'])){
         // in_array
         $extention = pathinfo($avatars['name'], PATHINFO_EXTENSION) ;
         var_dump($extention);
+//        die();
         $extention_allowed = ['jpg', 'jpef','png','gif'];
         // lay dung luong file tinh theo Mb
         $size_mb = $avatars['size']/1024/1024;

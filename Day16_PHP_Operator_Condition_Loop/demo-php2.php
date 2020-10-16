@@ -1,12 +1,12 @@
 <?php
 //demo_php2
 // truyen tham tri, tham chieu cho ham
-function showInfo($name){
-    $result = "xin chao: $name";
+function showInfo($name_parameter){
+    $result = "xin chao: $name_parameter";
     return $result;
 }
-$show_info = showInfo("khanhnt");
-echo $show_info; // xin chao khanhnt
+$show = showInfo('khanhnt');
+echo $show; // xin chao khanhnt
 echo "<br />";
 //+ voi cac ban moi khi viet ham vs goi ham thi thuongse truyen gia tri vao ham
 // theo kieu truyen tham tri

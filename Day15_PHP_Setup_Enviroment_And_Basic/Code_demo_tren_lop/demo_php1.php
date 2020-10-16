@@ -41,6 +41,7 @@
     echo $string4;
     // co the hien thi gia tri cua bien ngay trong chuoi ma ko can su dung
     // ky tu . de noi chuoi, voi dieu kien phai dc kahi bao su dung dau: ""
+//    die();
     $string5 = "noi chuoi: $string1, $string2";
     $string6 = 'noi chuoi: $string1, $string2';
     echo "<br />$string5";

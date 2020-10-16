@@ -82,11 +82,11 @@ if (isset($_POST['submit'])){
         //B2: Thuc thi truy van vua tao.
         $is_insert = mysqli_query($connect,$sql_insert);
         var_dump($is_insert);
-        // chuyen huong ve trang dan hsach neu them thanh cong
+        // chuyen huong ve trang index.php neu them thanh cong
         if($is_insert){
             $_SESSION['success'] = 'Them moi san phan thanh cong';
-            header('location: index.php');
-            exit();
+//            header('location: index.php');
+//            exit();
         }else {
                 $error = 'them moi san pham error';
         }
@@ -95,7 +95,7 @@ if (isset($_POST['submit'])){
 
 ?>
 <!--form them moi-->
-<!--do form co input upload file, buoc phai method: post vs enctpe-->
+<!--do form co input upload file, buoc phai method: post vs enctype-->
 <h3 style="color:red"><?php echo $error;?></h3>
 <form action="" method="post" enctype="multipart/form-data">
     nhap ten: <input type="text" name="name" value="" >

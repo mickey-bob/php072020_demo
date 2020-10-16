@@ -26,6 +26,7 @@
 echo "<pre>";
 print_r($_POST);
 echo "</pre>";
+
 //+ TAO CAC BIEN chua t.tin loi vs thanh cong.
 $error = '';
 $result = '';

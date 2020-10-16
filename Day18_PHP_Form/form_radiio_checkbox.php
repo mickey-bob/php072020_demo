@@ -52,6 +52,12 @@ if (isset($_GET['submit'])){
         $result .= "sex: $gender_text <br />";
         //hien thi jobs
         $jobs = $_GET['jobs'];
+        if (is_array($jobs)){
+            echo "day la echo jobs[]";
+            echo "<pre>";
+            print_r ($jobs);
+            echo "</pre>";
+        }
         $job_text = '';
         // lap mang de hien thi cac gia tri tuong ung
         foreach ($jobs AS $job){
