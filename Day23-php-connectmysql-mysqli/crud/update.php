@@ -22,7 +22,8 @@ require_once 'database.php';
 // validate du lieu tu url
 // bat buoc phai truyen tham so id, va id phai la number.
 // because url thi user co the chinh sua dc
-if (isset($_GET['id']) || is_numeric($_GET['id'])){
+if (!isset($_GET['id']) || !is_numeric($_GET['id'])){
+//    $id = $_GET['id'];
     $_SESSION['error'] = 'Tham so id ko hoop le';
     header('location:index.php');
     exit();
@@ -32,9 +33,13 @@ $id = $_GET['id'];
 // - tao cau truy van:
 $sql_select_one = "select * from products where id = $id";
 // select tra ve doi tuong trung gian, ko phai boolean nhu insert, update,delete.
-$obj_result_one = mysqli_query($connection, $sql_select_one);
+$obj_result_one = mysqli_query($connect, $sql_select_one);
+echo "<pre>";
+print_r ($obj_result_one);
+echo "</pre>";
 // - lay ra mang ket qua.
 $product = mysqli_fetch_assoc($obj_result_one);
+//$product = mysqli_fetch_all($obj_result_one,MYSQLI_ASSOC);
 echo "<pre>";
 print_r($product);
 echo "</pre>";
@@ -60,7 +65,7 @@ if (isset($_POST['submit'])){
     // xu ly logic bai toan chi khi nao ko co error
     if (empty($error)){
         // mac dinh giu lai ten file cu
-        $avatar = $product['avatar'];
+        $avatar = $product['avartar'];
         // xu ly upload file neu co file tai len.
         if ($avatar_arr['error'] ==0 ){
             // neu chua ton tai thu muc upload thi tao moi
@@ -69,17 +74,19 @@ if (isset($_POST['submit'])){
                 mkdir($dir_uploads);
             }
             // xoa bo file cu de tranh file rac
-            //tranh ba loi warning khi xoa file ko ton tai
+            //tranh bao loi warning khi xoa file ko ton tai
             @unlink($dir_uploads."/".$product['avatar']);
             // tao file mang tinh duy nhat, tranh bi ghi ddef file.
             $avatar = time().$avatar_arr['name'];
             //upload file:
             move_uploaded_file($avatar_arr['tmp_name'], $dir_uploads."/$avatar");
             // - tao cau truy van:
-            $sql_update = "UPDATE products SET name = '$name', avatar = '$avatar',
-              descripton = '$description' WHERE id = $id ";
+            $sql_update = "UPDATE products SET name = '$name', avartar = '$avatar',
+              description = '$description' WHERE id = $id ";
+//            var_dump($sql_update);
+//            die();
             // - THUC hien truy van vua tao
-            $is_update = mysqli_query($connection,$sql_update);
+            $is_update = mysqli_query($connect,$sql_update);
             if ($is_update){
                 $_SESSION['success'] = "update ban ghi $id thanh cong";
                 header('location: index.php');
@@ -101,7 +108,7 @@ if (isset($_POST['submit'])){
     nhap ten: <input type="text" name="name" value="<?php echo $product['name']?>" >
     <br />
     upload anh: <input type="file" name="avatar"/>
-    <img src="uploads/<?php echo $product['avatar'] ?>" height="80px" />
+    <img src="uploads/<?php echo $product['avartar'] ?>" height="80px" />
 
     <br/>
     mo ta chi tiet: <textarea name="description"><?php echo $product['description']; ?></textarea>

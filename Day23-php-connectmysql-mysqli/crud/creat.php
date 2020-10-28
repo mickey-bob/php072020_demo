@@ -85,8 +85,8 @@ if (isset($_POST['submit'])){
         // chuyen huong ve trang index.php neu them thanh cong
         if($is_insert){
             $_SESSION['success'] = 'Them moi san phan thanh cong';
-//            header('location: index.php');
-//            exit();
+            header('location: index.php');
+            exit();
         }else {
                 $error = 'them moi san pham error';
         }
@@ -106,4 +106,5 @@ if (isset($_POST['submit'])){
     <br />
     <input type="submit" name="submit" value="Save t.tin o day"/>
     <input type="reset" name="reset" value="reset form"/>
+<!--    <a href="index.php">Back to info page</a>-->
 </form>

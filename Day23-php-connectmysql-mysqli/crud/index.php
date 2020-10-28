@@ -15,19 +15,19 @@ $sql_select_all = 'SELECT * FROM products ORDER BY created_at DESC';
 // thuc thi truy van.
 $obj_result_all = mysqli_query($connect, $sql_select_all);
 // truong hop nay obj_result_all se tra ve array trung gian
-//echo "<pre>";
-//print_r($obj_result_all);
-//echo "</pre>";
+echo "<pre>";
+print_r($obj_result_all);
+echo "</pre>";
 //var_dump($obj_result_all);
 $products = mysqli_fetch_all($obj_result_all, MYSQLI_ASSOC);
-//echo "<pre>";
-//print_r ($products);
-//print_r($_SESSION);
-//echo "</pre>";
+echo "<pre>";
+print_r ($products);
+print_r($_SESSION);
+echo "</pre>";
 
 ?>
 <?php
-// hiem thi session thong bao.
+// hien thi session thong bao.
 if (isset($_SESSION['success'])){
     echo $_SESSION['success'];
     unset($_SESSION['success']);

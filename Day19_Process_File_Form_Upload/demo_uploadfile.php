@@ -85,8 +85,8 @@ if (isset($_POST['submit'])){
             if(!file_exists($dir_uploads)){
                 mkdir($dir_uploads);
             }
-            // can xu ly tao ten file anh co tinh duy naht, trnah truong hop upload nhieu lan
-            // cung 1 file --> ghi de anh
+            // can xu ly tao ten file anh co tinh duy nhat, trong truong hop upload nhieu lan
+            // cung 1 file --> ghi de picture
             $filename = time().$avatars['name'];
             //upload file vao thu muc uploads bang cach chuyen file tu thu muc tam sang
             // thu muc uploads: move_uploaded_file
@@ -104,7 +104,7 @@ if (isset($_POST['submit'])){
 ?>
 <h3 ><?php echo $error; ?></h3>
 <h3 style="color: purple" ><?php echo $result; ?></h3>
-<h3 style="color: purple" ><?php echo "thong bao tu echo"; ?></h3>
+<!--<h3 style="color: purple" >--><?php //echo "thong bao tu echo"; ?><!--</h3>-->
 <form action="" method="POST" enctype="multipart/form-data">
     Fullname:
      <input type="text" name="fullname" />

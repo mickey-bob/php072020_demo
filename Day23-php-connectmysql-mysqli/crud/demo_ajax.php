@@ -18,20 +18,24 @@
     $(document).ready(function () {
         // goi ajax su dung cu phap jquery
         var obj_ajax = {
-          // url se xu lly ajax
+          // url se xu lly ajax, file nay tren server co n.vu xu ly(get_product)
           url: 'get_product.php',
           // phuong thuc gui data
             method: 'POST',
-            // DANH sach cac tha mso vs gia tri gui len url neu co
+            // DANH sach cac tham so vs gia tri gui len url neu co
             data: {
               is_update: true,
-                info: 'abc'
+                info: 'abc',
+                is_source: "send var by method POST"
+                //file php get_product se lay t.tin data qua bien $_POST(dc setup ở bước method:)
             },
-            susccess: function () {
+            success: function (data) {
                 console.log(data);
+                // hien thi ket qua tra ve tren ra man hinh console giong nhu debug js-jquery code.
+                $("#result_ajax").html(data);
             },
         };
-        // cach goi ajax
+        // cach goi ajax, khi click the a moi goi ajax
        // $.ajax(obj_ajax);
         $('#ajax_click').click(function () {
             $.ajax(obj_ajax);
@@ -43,3 +47,5 @@
 <a href="#" id="ajax_click">
     click de lay danh sach san pham
 </a>
+<!--Khai bao 1 khoi de cho hien thi noi dung tra ve tu ajax-->
+<div id="result_ajax" style="color:green"></div>

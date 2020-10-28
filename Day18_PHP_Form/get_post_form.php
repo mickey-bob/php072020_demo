@@ -25,6 +25,7 @@ echo "<pre>";
 print_r($_GET);
 echo "<pre>";
 ?>
+<h3>Get</h3>
 <form action="" method="Get">
     Ten: <input type="text" name="fullname" />
     <br />

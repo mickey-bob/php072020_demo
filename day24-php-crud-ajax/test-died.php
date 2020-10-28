@@ -8,8 +8,9 @@
 
 echo "abc";
 echo "<br>";
-die('ham dead chet luon, ko chay code phia sau' );
+//die('ham dead chet luon, ko chay code phia sau' );
 echo "<br>";
-echo "echo sau dead";
+echo "echo sau die";
+mkdir (abc_khanhnt_php);
 
 ?>
