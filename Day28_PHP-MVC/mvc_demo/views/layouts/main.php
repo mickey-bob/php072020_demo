@@ -20,11 +20,28 @@
 <div class="header">
     <h1>Day la header</h1>
 </div>
-<div class="header">
-<!--    <h1>Day la main</h1>-->
-    // chuyen dynamic du lieu cua tung view vao day
+<div class="main">
+    <h1>Day la main</h1>
     <?php
-    // do ben controllder da nhung file layout rooi, nen file nay co the su dung
+    // hien thi error cua file layout, vi view nao cung phai nhung file layout vao
+    echo "<p style='color: red'>$this -> error </p>";
+
+    // Hien thi session thanh cong neu co
+    if (isset($_SESSION['success'])){
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+    }
+    ?>
+<!--    chuyen dynamic du lieu cua tung view vao day-->
+    <?php
+    // do ben controllder da nhung file layout rooi, nen file nay
+    // co the su dung t.tinh (attribute) cua controller do
+    echo $this -> content;
+//    var_dump($arr);
+//    echo "<pre>";
+//    print_r ($arr);
+//    echo "</pre>";
+
     ?>
 </div>
 <div class="footer">

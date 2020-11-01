@@ -74,7 +74,7 @@ if (!file_exists($controller_path)){
 require_once "$controller_path";
 // khoi tao object tu class controller
 $obj = new $controller();
-// goi method tuong ung vs action tu url tu obj vua khoi tao.
+// goi method tuong ung vs action ( lay tu url) của obj vua khoi tao.
 // can check neu ton tai method trong class thi moi truy cap dc.
 if (!method_exists($obj, $action)){
     die("Method $action ko ton tai trong $controller");

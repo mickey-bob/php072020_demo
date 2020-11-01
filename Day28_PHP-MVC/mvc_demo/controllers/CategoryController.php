@@ -1,4 +1,5 @@
 <?php
+require_once 'models/Category.php';
 /**
  * Created by PhpStorm.
  * User: khanhnt
@@ -39,14 +40,74 @@ class CategoryController{
         // - lay noi dung view dua vao method render
         $arr = [
             'var1' => 'Khanhnt',
-            'var2' => 20
+            'var2' => 20,
+            "Minh khai, tu liem, Ha Noi"
+
         ];
 
-        $this ->content = $this->render('views/categories,create.php');
+        // xu ly submit form
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";
+        if (isset($_POST['submit'])){
+            // gan bien
+            $name = $_POST['name'];
+            $descriptioon = $_POST['description'];
+            // validate from: phai nhap tat ca cac truong
+            if (empty($name) || empty($descriptioon)){
+                $this -> error = 'ko dc de trong';
+//                echo "ko dc de trong hah ha hahfha";
+            }
+            // luu vao bang categories chi khi ko co loi xay ra
+            if (empty($this -> error)){
+                // goi model de luu vao csdl
+                // khoi tao object tu model nay de co the su dung dc t.tinh/method
+                $category_model = new Category();
+                // gan gia tri tu form cho t.tinh cua model, vi metho insert de lieu dang thao tac
+                // voi t.inh cua chinh model do
+                $category_model-> name = $name;
+                $category_model -> description = $descriptioon;
+                $is_insert = $category_model->insertData();
+//                var_dump($is_insert);
+                if ($is_insert){
+                    $_SESSION['success'] = 'Thm moi thanh cong';
+                    // moi url deu phai tuan theo quy tac mvc da tat ra
+                    header('location: index.php?controller=category&action=index');
+                    exit();
+                } else {
+
+                }
+            }
+        }
+
+
+        // lay noi dung view create dua vao method render
+        $this ->content = $this->render('views/categories/create.php',$arr);
 //        echo "<pre>";
-//        print_r($content);
+//        print_r ($content);
 //        echo "</pre>";
         // goi layout de show noi dung view lay dc
+        require_once 'views/layouts/main.php';
+//        require_once giống copy toàn bộ code main.php vào chỗ này
+        // ---> trong file main.php sẽ hiểu dc các method/t.tinh trong file categoricontroller.php này.
+//        require_once 'views/categories/create.php';
+    }
+    public function index(){
+        // goi model de lay tat ca danh muc, truyen ra view de view hien thi (MVC)
+        $category_model = new Category();
+        $categories = $category_model->getAll();
+//        echo "<pre>";
+//        print_r($categories);
+//        echo "</pre>";
+        // tao array de truyen ra view:
+        $arr = [
+            'categories' => $categories
+        ];
+//        echo "index";
+        // buoc dau tien khi code 1 chuc nang moi la hien thi ra view
+        // - lay ra noi dung view
+        $this -> content = $this -> render('views/categories/index.php',$arr);
+        // goi layout vao de hien thi view vua lay dc
         require_once 'views/layouts/main.php';
     }
 }

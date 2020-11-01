@@ -8,5 +8,5 @@
 $test_one = "echo trong file test_require_once.php";
 require_once 'abc.php';
 echo "<br>";
-echo "$abc";
+//echo "$abc";
 ?>
