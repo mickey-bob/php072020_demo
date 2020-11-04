@@ -7,6 +7,9 @@
  */
 //views/categories/index.php
 // view liet ke danh muc
+echo "<pre>";
+print_r($arr);
+echo "</pre>";
 ?>
 <a href="index.php?controller=category&action=create">
     Them moi danh muc

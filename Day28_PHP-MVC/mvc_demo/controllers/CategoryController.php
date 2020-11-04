@@ -8,6 +8,7 @@ require_once 'models/Category.php';
  */
 //echo "<br>";
 //echo "echo trong file category controler";
+
 // Ve quy tac MVC, buoc moi ten class phai trung vs ten file
 class CategoryController{
     // chua noi dung view tuong ung, dung de chuyen qua layout
@@ -33,28 +34,32 @@ class CategoryController{
     }
     public function create(){
 //        echo "ceate";
+//        die('die trong create');
         // view create dang nam tai duong dan: views/categories/create.php
 //        require_once 'views/categories/create.php';
         // se ko goi file view don gian theo cach nay, ma su dung theo co che: render view dong - xay dung 1 method rieng
         // de lay noi dung view dua vao duong dan
         // - lay noi dung view dua vao method render
-        $arr = [
-            'var1' => 'Khanhnt',
-            'var2' => 20,
-            "Minh khai, tu liem, Ha Noi"
-
-        ];
+//        $arr = [
+//            'var1' => 'Khanhnt',
+//            'var2' => 20,
+//            "Minh khai, tu liem, Ha Noi"
+//
+//        ];
 
         // xu ly submit form
         echo "<pre>";
         print_r($_POST);
         echo "</pre>";
+
         if (isset($_POST['submit'])){
+
             // gan bien
             $name = $_POST['name'];
             $descriptioon = $_POST['description'];
             // validate from: phai nhap tat ca cac truong
             if (empty($name) || empty($descriptioon)){
+
                 $this -> error = 'ko dc de trong';
 //                echo "ko dc de trong hah ha hahfha";
             }
@@ -75,6 +80,7 @@ class CategoryController{
                     header('location: index.php?controller=category&action=index');
                     exit();
                 } else {
+                    $this ->error = 'Thêm mới thất bại';
 
                 }
             }
@@ -82,9 +88,9 @@ class CategoryController{
 
 
         // lay noi dung view create dua vao method render
-        $this ->content = $this->render('views/categories/create.php',$arr);
+        $this ->content = $this->render('views/categories/create.php');
 //        echo "<pre>";
-//        print_r ($content);
+//        print_r ($this -> content);
 //        echo "</pre>";
         // goi layout de show noi dung view lay dc
         require_once 'views/layouts/main.php';

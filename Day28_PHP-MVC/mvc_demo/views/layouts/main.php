@@ -21,10 +21,10 @@
     <h1>Day la header</h1>
 </div>
 <div class="main">
-    <h1>Day la main</h1>
+    <h1>Day la main, h1 trong file view-layouts-main</h1>
     <?php
     // hien thi error cua file layout, vi view nao cung phai nhung file layout vao
-    echo "<p style='color: red'>$this -> error </p>";
+//    echo "<p style='color: red'>$this ->error </p>";
 
     // Hien thi session thanh cong neu co
     if (isset($_SESSION['success'])){

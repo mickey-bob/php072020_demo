@@ -11,7 +11,7 @@ class CategoryController {
   public $error;
   /**
    * Lấy nội dung 1 view dựa vào đường dẫn tới view đó, có
-   * cơ chế truyền biến tường minh ra view để view sử dụng
+   * cơ chế truyền biến tường minh ra model view để model view sử dụng
    * @param $view_path
    * @param array $variables
    */

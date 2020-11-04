@@ -63,7 +63,7 @@ $controller .= "Controller"; // CategoryController.
 // Tao var khac de luu ten file controller.
 $controller_file = "$controller.php"; // CategoryController.php
 // Tao var chua duong dan toi file controller tren de c.bi nhung file
-// luu y nhung file from index.php root file.
+// luu y nhung file đường dẫn tương đối from index.php root file.
 $controller_path = "controllers/$controller_file";
 // check if file is not exist, t.bao Not found
 // file ko ton tai tuong duong vs controller ko ton tai
@@ -71,7 +71,9 @@ if (!file_exists($controller_path)){
     die("Trang ban tim ko ton tai");
 }
 // Thuc hien nhung file de khoi tao doi tuong tu class trong file do
+// file: CategoryController.php
 require_once "$controller_path";
+
 // khoi tao object tu class controller
 $obj = new $controller();
 // goi method tuong ung vs action ( lay tu url) của obj vua khoi tao.
