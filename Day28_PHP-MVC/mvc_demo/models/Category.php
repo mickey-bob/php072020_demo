@@ -36,18 +36,19 @@ class Category {
         // lay object ket noi csdl
         $this -> connection = $this -> getConnection();
         // - tao cau truy van duoi dang t.so de tranh loi bao mat sql injection
-        $sql_insert = "INSERT INTO categories (name, description) VALUES (:name, :desciption)";
+        $sql_insert = "INSERT INTO categories (name, description) VALUES (:name, :description)";
         // - chuan bi doi tuong truy van
-        $obj_insert = $this -> connection -> prepare ($sql_insert);
+        $obj_insert = $this->connection->prepare($sql_insert);
         // - Tao mang de truyen gia tri that cho t.so trong cau truy van neu co
         // gia tri that den tu chinh thuoc tinh cua model
         $inserts = [
           ':name' => $this ->name,
-          ':description' => $this->description
+          ':description' => $this->description,
         ];
         // - thuc thi object truy van vua tao.
         // voi truy van insert, update, delete -> boolean
         $is_insert = $obj_insert -> execute($inserts);
+        var_dump($is_insert);
         return $is_insert;
     }
 

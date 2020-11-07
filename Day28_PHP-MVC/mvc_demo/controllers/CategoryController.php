@@ -9,7 +9,7 @@ require_once 'models/Category.php';
 //echo "<br>";
 //echo "echo trong file category controler";
 
-// Ve quy tac MVC, buoc moi ten class phai trung vs ten file
+// Ve quy tac MVC, moi ten class phai trung vs ten file (must be same file names)
 class CategoryController{
     // chua noi dung view tuong ung, dung de chuyen qua layout
     public $content;
@@ -20,6 +20,7 @@ class CategoryController{
      * @param $view_path
      * @param array $variables
      */
+
     public function render($view_path, $variables = []){
         // giai nen cac array $variables truyen vao neu co de file view co the su dung dc.
         extract($variables);
@@ -31,6 +32,10 @@ class CategoryController{
         // sau khi doc xong noi dung file, ket thuc doc bang func sau:
         $render_view = ob_get_clean();
         return $render_view;
+        // require_once 'test.php';
+        // $variables sẽ dc truyền vào file test var (file dc require_once)
+        // --> file test.php sẽ biết dc $variables
+        // ?? tại sao function render phải có thêm biết $variables, vì khi requre_once thì file test.php đã tự hiểu dc $variables.
     }
     public function create(){
 //        echo "ceate";
@@ -40,12 +45,15 @@ class CategoryController{
         // se ko goi file view don gian theo cach nay, ma su dung theo co che: render view dong - xay dung 1 method rieng
         // de lay noi dung view dua vao duong dan
         // - lay noi dung view dua vao method render
-//        $arr = [
-//            'var1' => 'Khanhnt',
-//            'var2' => 20,
-//            "Minh khai, tu liem, Ha Noi"
-//
-//        ];
+        $arr = [
+            'var1' => 'Khanhnt',
+            'var2' => 20,
+            "Minh khai, tu liem, Ha Noi"
+
+        ];
+        if (!isset($_POST['submit'])){
+            var_dump($arr);
+        }
 
         // xu ly submit form
         echo "<pre>";
@@ -55,13 +63,17 @@ class CategoryController{
         if (isset($_POST['submit'])){
 
             // gan bien
+            echo "inside submit condition";
             $name = $_POST['name'];
+//            var_dump($name);
             $descriptioon = $_POST['description'];
+//            var_dump($descriptioon);
             // validate from: phai nhap tat ca cac truong
             if (empty($name) || empty($descriptioon)){
 
-                $this -> error = 'ko dc de trong';
-//                echo "ko dc de trong hah ha hahfha";
+                $this -> error = 'ko dc de trong nhe, condition inside if - categoryController.php';
+//                echo "ko dc de trong";
+//                echo "$this -> error";
             }
             // luu vao bang categories chi khi ko co loi xay ra
             if (empty($this -> error)){
@@ -75,7 +87,7 @@ class CategoryController{
                 $is_insert = $category_model->insertData();
 //                var_dump($is_insert);
                 if ($is_insert){
-                    $_SESSION['success'] = 'Thm moi thanh cong';
+                    $_SESSION['success'] = 'Them moi thanh cong';
                     // moi url deu phai tuan theo quy tac mvc da tat ra
                     header('location: index.php?controller=category&action=index');
                     exit();
@@ -89,6 +101,7 @@ class CategoryController{
 
         // lay noi dung view create dua vao method render
         $this ->content = $this->render('views/categories/create.php');
+
 //        echo "<pre>";
 //        print_r ($this -> content);
 //        echo "</pre>";
@@ -102,12 +115,12 @@ class CategoryController{
         // goi model de lay tat ca danh muc, truyen ra view de view hien thi (MVC)
         $category_model = new Category();
         $categories = $category_model->getAll();
-//        echo "<pre>";
-//        print_r($categories);
-//        echo "</pre>";
+        echo "<pre>";
+        print_r($categories);
+        echo "</pre>";
         // tao array de truyen ra view:
         $arr = [
-            'categories' => $categories
+            'categories' => $categories,
         ];
 //        echo "index";
         // buoc dau tien khi code 1 chuc nang moi la hien thi ra view
