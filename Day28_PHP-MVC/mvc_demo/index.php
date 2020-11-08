@@ -70,7 +70,7 @@ $controller_path = "controllers/$controller_file";
 if (!file_exists($controller_path)){
     die("Trang ban tim ko ton tai");
 }
-// Thuc hien nhung file de khoi tao doi tuong tu class trong file do
+// Thuc hien nhung file de khoi tao object tu class trong file do
 // file: CategoryController.php
 require_once "$controller_path";
 

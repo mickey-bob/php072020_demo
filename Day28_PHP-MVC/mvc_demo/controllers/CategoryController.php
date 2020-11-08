@@ -33,9 +33,9 @@ class CategoryController{
         $render_view = ob_get_clean();
         return $render_view;
         // require_once 'test.php';
-        // $variables sẽ dc truyền vào file test var (file dc require_once)
+        // $variables sẽ dc truyền vào file test (file dc require_once)
         // --> file test.php sẽ biết dc $variables
-        // ?? tại sao function render phải có thêm biết $variables, vì khi requre_once thì file test.php đã tự hiểu dc $variables.
+        // ?? tại sao function render phải có thêm var $variables, vì khi requre_once thì file test.php đã tự hiểu dc $variables.
     }
     public function create(){
 //        echo "ceate";
@@ -51,14 +51,17 @@ class CategoryController{
             "Minh khai, tu liem, Ha Noi"
 
         ];
-        if (!isset($_POST['submit'])){
-            var_dump($arr);
-        }
+//        if (!isset($_POST['submit'])){
+//            var_dump($arr);
+//        }
 
         // xu ly submit form
         echo "<pre>";
         print_r($_POST);
         echo "</pre>";
+
+
+        $this ->content = $this->render('views/categories/create.php');
 
         if (isset($_POST['submit'])){
 
@@ -100,7 +103,7 @@ class CategoryController{
 
 
         // lay noi dung view create dua vao method render
-        $this ->content = $this->render('views/categories/create.php');
+//        $this ->content = $this->render('views/categories/create.php');
 
 //        echo "<pre>";
 //        print_r ($this -> content);

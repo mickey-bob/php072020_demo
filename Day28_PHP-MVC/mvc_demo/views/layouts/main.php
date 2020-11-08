@@ -33,6 +33,7 @@
     }
     ?>
 <!--    chuyen dynamic du lieu cua tung view vao day-->
+    <h1> Bat dau goi t.tinh content trong class category</h1>
     <?php
     // do ben controllder da nhung file layout rooi, nen file nay
     // co the su dung t.tinh (attribute) cua controller do
