@@ -39,10 +39,6 @@
     // co the su dung t.tinh (attribute) cua controller do
     echo $this -> content;
 
-    echo "<pre>";
-    print_r ($arr);
-    echo "</pre>";
-
     ?>
 </div>
 <div class="footer">

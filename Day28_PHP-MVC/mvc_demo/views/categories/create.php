@@ -17,6 +17,7 @@ $a = get_defined_vars();
 echo "<pre>";
 print_r($a);
 echo "</pre>";
+
 ?>
 <form action="" method="POST">
     ten danh muc <input type="text" name="name" value="" />

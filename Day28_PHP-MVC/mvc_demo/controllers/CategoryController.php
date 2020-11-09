@@ -49,7 +49,6 @@ class CategoryController{
             'var1' => 'Khanhnt',
             'var2' => 20,
             'khanhnt' => "Minh khai, tu liem, Ha Noi"
-
         ];
 //        if (!isset($_POST['submit'])){
 //            var_dump($arr);
