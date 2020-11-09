@@ -11,7 +11,13 @@
 ?>
 <h1>form them moi danh muc </h1>
 <h2> form nay trong file views/categories/create.php </h2>
-<!--<h2>--><?php //var_dump($khanhnt)?><!--</h2>-->
+
+<?php
+$a = get_defined_vars();
+echo "<pre>";
+print_r($a);
+echo "</pre>";
+?>
 <form action="" method="POST">
     ten danh muc <input type="text" name="name" value="" />
     <br />

@@ -48,7 +48,7 @@ class CategoryController{
         $arr = [
             'var1' => 'Khanhnt',
             'var2' => 20,
-            "Minh khai, tu liem, Ha Noi"
+            'khanhnt' => "Minh khai, tu liem, Ha Noi"
 
         ];
 //        if (!isset($_POST['submit'])){
@@ -60,8 +60,9 @@ class CategoryController{
         print_r($_POST);
         echo "</pre>";
 
+        $this ->content = $this->render('views/categories/create.php',$arr);
 
-        $this ->content = $this->render('views/categories/create.php');
+
 
         if (isset($_POST['submit'])){
 
@@ -118,12 +119,14 @@ class CategoryController{
         // goi model de lay tat ca danh muc, truyen ra view de view hien thi (MVC)
         $category_model = new Category();
         $categories = $category_model->getAll();
+
         echo "<pre>";
         print_r($categories);
         echo "</pre>";
         // tao array de truyen ra view:
         $arr = [
             'categories' => $categories,
+
         ];
 //        echo "index";
         // buoc dau tien khi code 1 chuc nang moi la hien thi ra view

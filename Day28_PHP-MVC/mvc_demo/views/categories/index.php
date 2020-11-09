@@ -7,10 +7,12 @@
  */
 //views/categories/index.php
 // view liet ke danh muc
-//echo "<pre>";
-//print_r($arr);
-//echo "</pre>";
+
+echo "<pre>";
+print_r($categories);
+echo "</pre>";
 ?>
+
 <html>
 <a href="index.php?controller=category&action=create">
     Them moi danh muc
@@ -25,6 +27,7 @@
         <th>created_at</th>
         <th></th>
     </tr>
+
     <?php foreach ($categories AS $category): ?>
     <tr>
         <th><?php echo $category['id']?></th>
@@ -46,5 +49,6 @@
         <th href="<?php echo $url_delete?>" onclick="return confirm('xoa hay ko xoa')">Xoa</th>
     </tr>
     <?php endforeach;?>
+
 
 </table>
