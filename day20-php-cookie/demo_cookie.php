@@ -19,6 +19,7 @@
 //+ thoi gian song cua cookie tinh bang giay, tinh tu thoi gian hien tai.
 setcookie('age', 21, time()+ 3660);
 setcookie('test', 'testing', time()+ 20);
+setcookie('abc', 'testing third cookie', time()+ 20);
 
 
 // - lay gia tri cookie: thao tac giong array.
@@ -27,7 +28,7 @@ echo isset($_COOKIE['test']) ? $_COOKIE['test'] : ''; // ":" giong else; '': tuc
 
 // - xoa cookie: xoa ko giong session
 // van dung ham setcookie, set thoi gian song laf gia tri am:
-setcookie('age','abc',time() - 1);
+setcookie('abc','abc',time() - 1);
 // debug array: $_cookie
 echo "<pre>";
 print_r($_COOKIE);

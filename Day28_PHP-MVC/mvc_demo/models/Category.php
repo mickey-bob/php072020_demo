@@ -39,7 +39,7 @@ class Category {
         $sql_insert = "INSERT INTO categories (name, description) VALUES (:name, :description)";
         // - chuan bi doi tuong truy van
         $obj_insert = $this->connection->prepare($sql_insert);
-        // - Tao mang de truyen gia tri that cho t.so trong cau truy van neu co
+        // - Tao array de truyen gia tri that cho t.so trong cau truy van neu co
         // gia tri that den tu chinh thuoc tinh cua model
         $inserts = [
           ':name' => $this ->name,
@@ -55,7 +55,7 @@ class Category {
     // lay tat caa danh muc dang co tren he thong
     public function getAll(){
         // tao cau truy van
-        $sql_select_all = "SELECT * FRO categories ORDER BY created_at DESC";
+        $sql_select_all = "SELECT * FROM categories ORDER BY created_at DESC";
         // TAO DOI TUONG TRUY VAN
         $this -> connection = $this -> getConnection();
         $obj_select_all = $this->connection->prepare($sql_select_all);

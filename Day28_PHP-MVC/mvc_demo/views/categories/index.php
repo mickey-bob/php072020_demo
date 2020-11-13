@@ -8,9 +8,9 @@
 //views/categories/index.php
 // view liet ke danh muc
 
-echo "<pre>";
-print_r($categories);
-echo "</pre>";
+//echo "<pre>";
+//print_r($categories);
+//echo "</pre>";
 ?>
 
 <html>

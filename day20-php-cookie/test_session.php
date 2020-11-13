@@ -17,7 +17,7 @@ session_start();
  */
 // them element cho session.
 $_SESSION['fullname'] = 'khanhnt';
-$_SESSION['age'] = '20';
+$_SESSION['age'] = 20;
 $_SESSION['addr'] = 'Ha Noi';
 $_SESSION['class']['amount'] = 10;
 

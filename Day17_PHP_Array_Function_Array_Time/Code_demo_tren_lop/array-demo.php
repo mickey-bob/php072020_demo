@@ -39,6 +39,7 @@ echo("</pre>");
 // -
 $arr1 = array('khanhnt', 10, 19.5,true, array());
 //echo $arr1;           //se bao error
+//die();
 // --> echo 1 array se bao loi.
 // vong lap foreach.
 //+ de hien thi dc gia tri cua mang, se can su dung vong lap.
@@ -66,6 +67,7 @@ foreach ($arr AS $value1){
     echo $value1;
     echo "<br />";
 }
+
 // -- foreach day du ca key vs value: dung khi muon thao tac vs ca key vs value cua element.
 foreach ($arr AS $key_demo => $value_demo){
     echo "Phan tu co key = $key_demo dang co gia tri bang = $value_demo";
@@ -138,10 +140,10 @@ $arr = [
 // can chu y logic khi xu ly element cua array.
 //die();
 foreach ($arr AS $key => $value){
-    echo "<br /> key = $key, value = $value";
+    echo "<br /> key array = $key, value = $value";
 }
 echo "<br />";
-//die();
+
 // Lay gia tri theo cac thu cong tu array da chieu.
 echo $arr['info']['class']['amount']; //27
 echo "<br />";
@@ -164,7 +166,7 @@ $arr = ['PHP', 'HTML', 'CSS','JS'];
     </tr>
     <?php foreach($arr AS $key => $value): ?>
     <tr>
-        <td><?php echo $value; ?></td>
+        <td><?php echo "$value co key la: $key"; ?></td>
     </tr>
     <?php endforeach; ?>
 <!--    <tr>-->

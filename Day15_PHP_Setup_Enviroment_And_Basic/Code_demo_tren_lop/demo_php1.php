@@ -7,6 +7,8 @@
      */
     $name = 'khanh';
     $age = '30';
+//    echo _LINE_;
+//    echo "<br />";
     /**
      * 2- quy tac dat ten bien: giong js
      * $1bc = 6;             ko hop le
@@ -97,7 +99,7 @@ echo "<br />";
 
 echo __LINE__; //97: so dong dang goi ham nay -- 97
 echo "<br />";
-    // hien thi duong dan vat ly toi file hie ntai dang oi hang nay.
+    // hien thi duong dan vat ly toi file hie ntai dang goi const nay.
     echo __FILE__;
 echo "<br />";
     // HHIEN THI DUONG DAN VAT LY TOI THU muc gan nhat chua file hien tai dang goi ham nay

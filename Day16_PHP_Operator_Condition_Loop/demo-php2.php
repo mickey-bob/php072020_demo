@@ -3,6 +3,8 @@
 // truyen tham tri, tham chieu cho ham
 function showInfo($name_parameter){
     $result = "xin chao: $name_parameter";
+//    var_dump($name_parameter);
+//    echo "<br />";
     return $result;
 }
 $show = showInfo('khanhnt');

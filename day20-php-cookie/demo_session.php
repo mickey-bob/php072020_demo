@@ -12,6 +12,7 @@ session_start();
 // + thu trinh duyet aanr, chay lai file nay --> se gap error. : ko biet key=fullname nay o dau
 // + khi thao tac vs session luon phai biet dc session sinh ra tu dau
 //
-//echo $_SESSION['fullname'];
+echo $_SESSION['fullname'];
+echo "<br />";
 echo isset($_SESSION['fullname']) ? $_SESSION['fullname'] : '';
 ?>

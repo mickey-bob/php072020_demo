@@ -32,10 +32,9 @@ class CategoryController{
         // sau khi doc xong noi dung file, ket thuc doc bang func sau:
         $render_view = ob_get_clean();
         return $render_view;
-        // require_once 'test.php';
-        // $variables sẽ dc truyền vào file test (file dc require_once)
-        // --> file test.php sẽ biết dc $variables
-        // ?? tại sao function render phải có thêm var $variables, vì khi requre_once thì file test.php đã tự hiểu dc $variables.
+        // truyền var: variables vào file trong link: view_path.
+        // trong file: 'view_path' sẽ có var tên là: $variables,
+        //
     }
     public function create(){
 //        echo "ceate";
@@ -60,9 +59,9 @@ class CategoryController{
         echo "</pre>";
 
         $this ->content = $this->render('views/categories/create.php',$arr);
-
-
-
+        // file: views/categories/create.php sẽ dc truyền vào var
+        // tên: $variables (như method render khai báo - ko phải var $arr)
+        // var $arr đóng vai trò như t.số, còn tên var truyền vào create.php sẽ là $variables.
         if (isset($_POST['submit'])){
 
             // gan bien
@@ -119,9 +118,9 @@ class CategoryController{
         $category_model = new Category();
         $categories = $category_model->getAll();
 
-        echo "<pre>";
-        print_r($categories);
-        echo "</pre>";
+//        echo "<pre>";
+//        print_r($categories);
+//        echo "</pre>";
         // tao array de truyen ra view:
         $arr = [
             'categories' => $categories,
