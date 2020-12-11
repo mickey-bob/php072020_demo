@@ -38,7 +38,7 @@ try {
 } catch (PDOException $e){
     die("Loi ket noi:" .$e->getMessage());
 }
-/// check lai phuong thuc khoi tao trong class (su dung khi newPDO()).//////////////////
+/// check lai phuong thuc khoi tao trong class (newPDO() --> la p.thuc khoi tao).//////////////////
 echo "Ban da ket noi thanh cong";
 //echo "<pre>";
 //print_r($connection);

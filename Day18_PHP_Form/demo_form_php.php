@@ -40,7 +40,7 @@ echo "</pre>";
     upload avatar:
 <input type = "file" name="avatar"  />
     file multiple:
-<input type = "file" multiple name = "files[]" />
+<input type = "file" multiple name ="files[]" />
     <br />
 Country
 <select name = "country">

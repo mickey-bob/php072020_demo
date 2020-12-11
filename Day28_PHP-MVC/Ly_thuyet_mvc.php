@@ -10,21 +10,21 @@
 // code thuan kho cho nguoi sau vao view, modify, imposible with lage project.
 // framwork, cms cua php deu dc xay dung dua tren MVC
 // TACH BIET website thanh 3 t.phan rieng biet
-// do viet dua tren ooop --> kha khoai
+// because viet dua tren ooop --> kha khoai
 
 /*
  * 2- Thanh phan:
  * + M: Model: tuong tac vs csdl, code ket noi, t.tac vs csdl
- * + V: View: noi hien thi giao dien toi nguoi dung.
+ * + V: View: show, hien thi giao dien toi nguoi dung.
  * + C: controler: Luan chuyen data between: M-V
  *
  * 3- xAY dung ung dung CRUD danh muc theo mo hinh MVC
  * B1: build cau truc folder MVC.
- * mvc-demo/assets/: chua css,js,image, font ..
+ * mvc-demo/assets/: chua css,js,image, font .. // cai gi mà user show dc thì cho vào assets.
  *                //css/style.css: file css
  *                //js/script.js: file js
  *                //images/abc.png: anh
- * // cai gi mà user show dc thì cho vào assets.
+ *
  *          /configs: chua cac cau hinh he thong DB, Mail...
  *                //Database.php: class chua cau hinh DB
  *          /controllers: chứa các class controller - C

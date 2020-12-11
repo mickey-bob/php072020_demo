@@ -181,9 +181,9 @@ class TestProtected {
 //$tet_pro -> add(); ---> bao error, vi object ko truy cap dc class protected
 // object khoi tao tu class ko truy cap dc t.tinh/method proteted
 // tinh ke thua: extends: 1 class ke thua tu class cha co the truy cap dc tat ca
-// p.thuc/t.tinh  cua class cha (chỉ kế thừa trong child class, còn object tạo từ child
-// class cũng ko truy cập dc).
-// ma co pham vi truy cap la protected/public
+// p.thuc/t.tinh  cua class cha ma co pham vi truy cap la protected/public
+// (chỉ kế thừa trong child class, còn object tạo từ child class cũng ko truy cập dc).
+//
 class Children extends TestProtected{
     public $var_child;
     public function child_class_method(){

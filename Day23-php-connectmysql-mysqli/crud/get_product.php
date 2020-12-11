@@ -36,6 +36,7 @@ echo "</pre>";
     <tr>
         <td><?php echo $product['id']; ?></td>
         <td><?php echo $product['name']; ?></td>
+        <td><?php echo $product['avartar']; ?></td>
     </tr>
     <?php endforeach;?>
 

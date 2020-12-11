@@ -74,8 +74,8 @@ if (isset($_POST['submit'])){
                 mkdir($dir_uploads);
             }
             // xoa bo file cu de tranh file rac
-            //tranh bao loi warning khi xoa file ko ton tai
-            @unlink($dir_uploads."/".$product['avatar']);
+            // them @ tranh bao loi warning khi xoa file ko ton tai
+            @unlink($dir_uploads."/".$product['avartar']);
             // tao file mang tinh duy nhat, tranh bi ghi ddef file.
             $avatar = time().$avatar_arr['name'];
             //upload file:

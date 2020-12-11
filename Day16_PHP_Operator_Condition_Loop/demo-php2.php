@@ -1,4 +1,5 @@
 <?php
+// demo if-else, switch-case, -- cu phap viet tat
 //demo_php2
 // truyen tham tri, tham chieu cho ham
 function showInfo($name_parameter){

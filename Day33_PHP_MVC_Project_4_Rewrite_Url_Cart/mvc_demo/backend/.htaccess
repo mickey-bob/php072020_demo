@@ -1,0 +1,10 @@
+#.htaccess: file ngang hang vs file index goc cua ung dung
+# dung de reqirete url -> url than thien voi nguoi dung
+# file rat nhay cam, trang web co the dia neu chinh sua file nay ko dung
+RewriteEngine On
+# khai bao cac rules theo dang sau:
+# rewriterule url-than-thien url-mvc
+RewriteRule giohangcuaban.html index.php?controller=cart&action=index
+#/index.php?controller=product&actoin=detail&id=7
+# - rewire cho trng chi teit san phan: chi-tiet-san-sam/7
+RewriteRule chi-tiet-san-pham/([0-9]{1,}) index.php?conroller=product$action=detail&id=$1
